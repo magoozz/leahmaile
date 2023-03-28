@@ -6,7 +6,7 @@
   </head>
   <body>
     <header>
-      <h1>Photography Website</h1>
+      <h1>Leah Maile Photography</h1>
     </header>
     <nav>
         <ul class="nav-links">
@@ -17,8 +17,12 @@
         </ul>
         </nav>
     <main>
-    <h2>Welcome to my Photography Website</h2>
-    <p>Here you will find a selection of my best photos. Please browse through my portfolio and feel free to contact me if you have any questions or would like to schedule a photoshoot.</p>
+    <h2>Contact Me</h2>
+    <p>Welcome to my photography website, where I showcase my passion for capturing the beauty of the world around us. From stunning landscapes to intimate portraits, my photography reflects the unique personality of each subject and the emotion of every moment.
+
+        As a professional photographer, I am committed to delivering exceptional service and creating unforgettable images for my clients. Whether you're looking for a portrait session, wedding photography, or commercial photography, I have the skills and experience to bring your vision to life.
+        
+        If you're interested in learning more about my services or would like to discuss a photography project, please don't hesitate to reach out. I look forward to hearing from you and working together to create something truly special. Simply fill out the contact form below, and I'll be in touch soon.</p>
     <h3>Contact Me</h3>
     <form action="submit-form.php" method="post">
       <label for="name">Name:</label>
@@ -29,6 +33,28 @@
       <textarea id="message" name="message" required></textarea>
       <button type="submit">Send</button>
     </form>
+
+
+    <div class="container">
+        <h3>Contact Form</h3>
+        <form action="submit-form.php" name="post">
+            <label for="name">Name:</label>
+            <input name="name" type="text" required placeholder="John"/>
+            <br>
+            <label for="last_name">Last Name</label>
+            <input name="last_name" type="text" required placeholder="Doe"/>
+            <br>
+            <label for="email">Email</label>
+            <input name="email" type="email" required placeholder="you@domain.com"/>
+            <br>
+            <label for="message">Message</label><br>
+            <textarea name="message" cols="30" rows="10" placeholder="Enter your message here ..." required> </textarea>
+            <div class="center">
+                <input type="submit" value="Submit">
+            </div>
+        </form>	
+    </div>
+
     <h3>Featured Photos</h3>
     <div class="gallery">
       <img src="photos/index1.jpg" alt="Photo 1">
