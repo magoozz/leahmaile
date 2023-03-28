@@ -7,9 +7,6 @@ body {
 
 header {
   background-color: #6B705C !important;
-  color: white;
-  text-align: center;
-  padding: 20px;
 }
 
 header::after {
@@ -24,14 +21,17 @@ nav {
 }
 
 .nav-links {
-  width: 80%;
+  background-color: #6B705C !important;
+  width: 100%;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
 }
 
 .logo {
   float: left;
   width: 50%;
-  padding-left: 1px;
+  left: 80px;
 }
 
 nav ul {
