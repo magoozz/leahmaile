@@ -26,12 +26,12 @@ nav {
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .logo {
   float: left;
-  width: 30%;
-  left: 80px;
+  height: 111px;
 }
 
 nav ul {
@@ -59,7 +59,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #000;
+  color: #eddcd2;
 }
 
 .nav-list a::before {
@@ -67,7 +67,7 @@ nav a:hover {
   display: block;
   height: 5px;
   width: 100%;
-  background-color: #444;
+  background-color: #eddcd2;
 
   position: absolute;
   top: 0;
@@ -78,6 +78,30 @@ nav a:hover {
 
 .nav-list a:hover::before{
   width: 100%;
+}
+
+.menu{
+  display: none;
+}
+
+.menu-line {
+  width: 20px;
+  height: 3px;
+  background-color: white;
+  margin-bottom: 4px;
+}
+
+/*Adjust tool bar */
+@media all and (max-width: 480px) {
+  .nav-links {
+    flex-direction: column;
+  }
+  .media {
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
 }
 
 main {
