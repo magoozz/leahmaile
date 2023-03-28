@@ -47,7 +47,7 @@ nav ul {
 nav li {
   display: inline-block;
   margin-left: 70px;
-  padding-top: 1px;
+  padding-top: 10px;
 
   position: relative;
 }
@@ -62,7 +62,7 @@ nav a:hover {
   color: #000;
 }
 
-nav a::before {
+.nav-list a::before {
   content: '';
   display: block;
   height: 5px;
@@ -76,7 +76,7 @@ nav a::before {
   transition: all ease-in-out 250ms;
 }
 
-nav a:hover::before{
+.nav-list a:hover::before{
   width: 100%;
 }
 
