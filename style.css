@@ -15,11 +15,16 @@ header {
 nav {
   background-color: #ccc;
   padding: 10px;
+  float: right;
 }
 
 .nav-links {
   width: 80%;
   margin: 0 auto;
+}
+
+.logo {
+  float: left;
 }
 
 nav ul {
