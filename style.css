@@ -19,7 +19,6 @@ header::after {
 }
 
 nav {
-  background-color: #ccc;
   padding: 10px;
   float: right;
 }
@@ -31,7 +30,9 @@ nav {
 
 .logo {
   float: left;
-  size-adjust: 30%;
+  width: 10%;
+  height: auto;
+  padding: 10px 0;
 }
 
 nav ul {
@@ -45,11 +46,18 @@ nav ul {
 nav li {
   display: inline-block;
   margin-left: 70px;
-  padding: 0;
+  padding-top: 25px;
 }
 
 nav a {
+  color: #444;
   text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  color: #000;
+  
 }
 
 main {
