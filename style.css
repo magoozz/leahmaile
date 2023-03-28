@@ -12,6 +12,12 @@ header {
   padding: 20px;
 }
 
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
 nav {
   background-color: #ccc;
   padding: 10px;
