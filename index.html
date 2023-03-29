@@ -1,84 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Leah Maile Photography</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
-  <body>
     <header>
-        <title>Navigation Bar</title>
+      <nav class="nav-links">
         <div class="logo-m">
           <a class="active" href="index.html">
           <img src="photos/logoAlt.png" alt="logo" class="logo">
           </a>
         </div>
-        <nav class="nav">
           <ul class="nav-list">
         <li><a href="about.html">About</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="info.html">Info</a></li>
         <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="menu">    //for phone compatatbility
+        <div class="menu">
           <div class="menu-line"> </div>
           <div class="menu-line"> </div>
           <div class="menu-line"> </div>
         </div>
       </nav>
     </header>
-    <main>
-      <section>
-      <div class="lm">
-        <h2  style="font-size:60px">Leah Maile</h2>
-        <h2  style="font-size:100px"> Photography</h2>
-      </div>
-    </section>
-      <div class="reveal">
-        <section>
-      <h3>Featured Photos</h3>
-      <div class="gallery">
-        <div class="scroll">
-        <img src="photos/index1.jpg" alt="Photo 1">
-        <img src="photos/index3.jpg" alt="Photo 3">
-        <img src="photos/index2.jpg" alt="Photo 2">
-      </div>
-      </div>
-      <div class="gallery">
-        <div class="row">
-        <img src="photos/index1.jpg" alt="Photo 1">
-        <img src="photos/index3.jpg" alt="Photo 3">
-        <img src="photos/index2.jpg" alt="Photo 2">
-        </div>
-      </div>
-        </section>
 
-        <section>
-      <div class="gallery">
-        <img src="photos/index1.jpg" alt="Photo 1">
-        <img src="photos/index3.jpg" alt="Photo 3">
-        <img src="photos/index2.jpg" alt="Photo 2">
+    <body>
+      <div class="smooth-scroll-wrapper">
+          <div class="content">
+              <div class="container">
+                  <h1 class="text">United Athle 2020</h1>
+                  <div class="img">
+                      <img src="photos/index1.jpg" alt="" />
+                  </div>
+                  <p class="text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat esse
+                      explicabo porro impedit nemo dolore incidunt dolores distinctio numquam
+                      autem.
+                  </p>
+              </div>
+              <div class="container">
+                  <h1 class="text">Enemey of boring</h1>
+                  <div class="img">
+                      <img src="photos/index2.jpg" alt="" />
+                  </div>
+                  <p class="text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ut quis
+                      quaerat error soluta. Provident tempora omnis distinctio quibusdam minus
+                      nesciunt sunt.
+                  </p>
+              </div>
+
+              <div class="container">
+                  <h1 class="text">(R)evolution high</h1>
+                  <div class="img">
+                      <img src="photos/index3.jpg" alt="" />
+                  </div>
+                  <p class="text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate illum
+                      sequi enim fugiat, temporibus tempore veritatis minus maxime, voluptates
+                      tempora similique vel. Tempora harum pariatur ipsa.
+                  </p>
+              </div>
+              <div class="container">
+                  <h1 class="text">Groove recruit 19</h1>
+                  <div class="img">
+                      <img src="img-four.jpg" alt="" />
+                  </div>
+                  <p class="text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rem labore
+                      fuga dolorum ea obcaecati est, voluptates ipsum tempore voluptate.
+                  </p>
+              </div>
+          </div>
       </div>
-        </section>
+    <script>
+      const body = document.body,
+          scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
+          height = scrollWrap.getBoundingClientRect().height - 1,
+          speed = 0.04;
 
-        <script type="text/javascript">
-          window.addEventListener('scroll', reveal);
-          function reveal(){
-            var reveals = document.querySelectorAll('.reveal');
-            for(var i = 0; i < reveals.length; i++) {
-              var windowHeight = window.innerHeight;
-              var revealTop = reveals[i].getBoundingClientRect().top;
-              var revealPoint = 150;
+      var offset = 0;
 
-              if(revealTop < windowHeight - revealPoint) {
-                reveals[i].classList.add('active');
-              } else {
-                reveals[i].classList.remove('active');
+      body.style.height = Math.floor(height) + "px";
+
+      function smoothScroll() {
+          offset += (window.pageYOffset - offset) * speed;
+
+          var scroll = "translateY(-" + offset + "px) translateZ(0)";
+          scrollWrap.style.transform = scroll;
+
+          callScroll = requestAnimationFrame(smoothScroll);
+      }
+
+      smoothScroll();
+
+      $(function () {
+          var elements = $(".text, .img").toArray();
+          $(window).scroll(function () {
+              elements.forEach(function (item) {
+                  if ($(this).scrollTop() >= $(item).offset().top - 400) {
+                      $(item).addClass("reveal");
+                  }
+              });
+          });
+          elements.forEach(function (item) {
+              if ($(this).scrollTop() >= $(item).offset().top - 400) {
+                  $(item).addClass("reveal");
               }
-            }
-          }
-        </script>
-      </div>
-    </main>
+          });
+      });
+  </script>
     <footer>
       <p>&copy; Leah Maile Photography. All rights reserved.</p>
     </footer>
