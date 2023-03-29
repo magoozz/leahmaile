@@ -15,6 +15,7 @@ header::after {
   clear: both;
 }
 
+
 nav {
   padding: 10px;
   padding-bottom: 10px;
@@ -30,8 +31,6 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-
-
 }
 
 .logo {
@@ -51,16 +50,14 @@ nav ul {
 
 nav li {
   display: inline-block;
-  margin-left: 70px;
-  padding-top: 10px;
-
+  margin-left: 50px;
+  padding-top: 15px;
   position: relative;
 }
 
 nav a {
   color: #1b1b1e;
-  font-size: 35px;
-  font-weight: bold;
+  font-size: 30px;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -68,18 +65,15 @@ nav a {
 /*When the mouse hovers over the different pages in the nav bar*/
 nav a:hover {
   color: #dad7cd;
-  font-size: 40px;
   transition: all ease-in-out 250ms;
 }
 
 /*When the mouse hovers over the logo*/
 .logo:hover {
-  height: 100px;
   transition: all ease-in-out 250ms;
 }
 
-/*
-.nav-list a::before {
+.nav a::before {
   content: '';
   display: block;
   height: 5px;
@@ -92,7 +86,7 @@ nav a:hover {
 
   transition: all ease-in-out 250ms;
 }
-*/
+
 
 .nav-list a:hover::before{
   width: 100%;
