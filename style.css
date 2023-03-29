@@ -19,7 +19,8 @@ nav {
   padding: 10px;
   padding-bottom: 10px;
   float: right;
-  height: 100px;
+  height: 105px;
+  max-height: 100px;
 }
 
 .nav-links {
@@ -29,12 +30,13 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+
 }
 
 .logo {
+  height: 95px;
   float: left;
-  padding-right: 10%;
-  height: 100px;
 }
 
 nav ul {
