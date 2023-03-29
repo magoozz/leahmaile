@@ -17,7 +17,9 @@ header::after {
 
 nav {
   padding: 10px;
+  padding-bottom: 10px;
   float: right;
+  height: 100px;
 }
 
 .nav-links {
@@ -31,7 +33,8 @@ nav {
 
 .logo {
   float: left;
-  height: 200px;
+  padding-right: 10%;
+  height: 100px;
 }
 
 nav ul {
@@ -60,10 +63,20 @@ nav a {
   text-transform: uppercase;
 }
 
+/*When the mouse hovers over the different pages in the nav bar*/
 nav a:hover {
-  color: #eddcd2;
+  color: #dad7cd;
+  font-size: 40px;
+  transition: all ease-in-out 250ms;
 }
 
+/*When the mouse hovers over the logo*/
+.logo:hover {
+  height: 100px;
+  transition: all ease-in-out 250ms;
+}
+
+/*
 .nav-list a::before {
   content: '';
   display: block;
@@ -77,15 +90,18 @@ nav a:hover {
 
   transition: all ease-in-out 250ms;
 }
+*/
 
 .nav-list a:hover::before{
   width: 100%;
 }
 
+/*The current "page" via the nav bar */
 .active {
-  color: #eddcd2;
+  color: #dad7cd;
 }
 
+/*This down to the @media for phone compatability*/
 .menu{
   display: none;
 }
@@ -97,7 +113,7 @@ nav a:hover {
   margin-bottom: 4px;
 }
 
-/*Adjust tool bar */
+/*Adjust tool bar for phone compatablility*/
 @media all and (max-width: 480px) {
   .nav-links {
     flex-direction: column;
