@@ -19,7 +19,7 @@ header::after {
 nav {
   padding: 10px;
   padding-bottom: 10px;
-  float: right;
+  float: center;
   height: 105px;
   max-height: 100px;
 }
@@ -71,6 +71,7 @@ nav a:hover {
 /*When the mouse hovers over the logo*/
 .logo:hover {
   transition: all ease-in-out 250ms;
+  /*change color when hovered over*/
 }
 
 .nav a::before {
@@ -122,6 +123,13 @@ nav a:hover {
   }
 }
 
+.lm h2{
+  text-align: center;
+  font-family: Futara;
+  text-transform: uppercase;
+}
+
+
 main {
   margin: 20px;
 }
@@ -137,6 +145,48 @@ main {
   border: 2px solid #ccc;
   border-radius: 5px;
 }
+
+section {
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section:nth-child(1) {
+
+}
+
+section .gallery {
+  margin: 100Px;
+}
+
+section .row {
+  display: flex;
+}
+
+@media (max-width: 900px) {
+  section h2{
+    font-size: 100px;
+  }
+
+  section .gallery{
+    flex-direction: column;
+  }
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
 
 footer {
   background-color: #6B705C;
