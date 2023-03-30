@@ -183,7 +183,7 @@ nav {
 nav ul {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding-bottom: 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -232,6 +232,7 @@ nav a:hover {
 
 .nav-list a:hover::before{
   width: 100%;
+
 }
 
 /*The current "page" via the nav bar */
@@ -274,7 +275,7 @@ nav a:hover {
 
 .gallery {
   display: flex;
-  transition: transform 2s ease;
+  transition: transform 2.5s ease;
 }
 
 .gallery img {
