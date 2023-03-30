@@ -15,19 +15,14 @@ body {
 }
 
 .content {
-  width: 70%;
+  width: 85%;
   margin: auto;
 }
 
 .container {
   margin: 0px 0;
-}
-
-.index1 {
-  display: grid;
-  align-items: center; 
-  grid-template-columns: 3fr 2fr 3fr;
-  column-gap: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
@@ -176,7 +171,7 @@ nav {
   width: 100%;
   margin: 0 auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -220,7 +215,7 @@ nav a:hover {
   /*change color when hovered over*/
 }
 
-.nav a::before {
+.nav-links a::before {
   content: '';
   display: block;
   height: 5px;
@@ -228,7 +223,7 @@ nav a:hover {
   background-color: #eddcd2;
 
   position: absolute;
-  top: 0;
+  bottom: 0;
   width: 0%;
 
   transition: all ease-in-out 250ms;
@@ -274,8 +269,7 @@ nav a:hover {
 /*************Sliding image gallery **************/
 
 .gallery-container {
-  width: 100%;
-  overflow: hidden;
+  width: 50%;
 }
 
 .gallery {
@@ -287,6 +281,25 @@ nav a:hover {
   width: 100%;
   height: auto;
 }
+
+.index1 {
+  display: flex;
+  align-items: center;
+}
+
+.movingGallery {
+  display: flex;
+  transition: transform 2s ease;
+}
+
+.img.reveal {
+  width: 80%;
+}
+
+.indexText1 {
+ padding: 100px;
+}
+
 /***************************************************/
 
 main {
