@@ -34,7 +34,13 @@
                   <h1 class="text">Leah Maile Photography</h1>
                   <div class="index1">
                   <div class="img">
-                      <img src="photos/index1.jpg" alt="abby infront of the B" />
+                    <div class="movingGallery">
+                      <div class="gallery"> 
+                        <img src="photos/index1.jpg" alt="abby infront of the B" />
+                        <img src="photos/index2.jpg" alt="abby infront of the B" />
+                        <img src="photos/index3.jpg" alt="abby infront of the B" />
+                      </div>
+                    </div>
                   </div>
                   <p class="text">
                       Here to capture your special moments!
@@ -103,6 +109,22 @@
               }
           });
       });
+  </script>
+
+  <script>
+    let gallery = document.querySelector(".gallery");
+    let images = document.querySelectorAll(".gallery img");
+    let currentIndex = 0;
+    let slideInterval = setInterval(nextSlide, 3000);
+
+  function nextSlide() {
+  currentIndex++;
+  if (currentIndex === images.length) {
+    currentIndex = 0;
+  }
+  let translateValue = -gallery.clientWidth * currentIndex;
+  gallery.style.transform = `translateX(${translateValue}px)`;
+}
   </script>
     <footer>
       <p>&copy; Leah Maile Photography. All rights reserved.</p>

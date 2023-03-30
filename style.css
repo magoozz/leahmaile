@@ -7,6 +7,7 @@ html, body {
   height: 1600px;
 }
 
+/*****************Movement of the page ******************/
 body {
   box-sizing: border-box;
   padding: 0 120px;
@@ -15,11 +16,11 @@ body {
 
 .content {
   width: 70%;
-  margin: 200px auto;
+  margin: auto;
 }
 
 .container {
-  margin: 80px 0;
+  margin: 0px 0;
 }
 
 .index1 {
@@ -37,7 +38,6 @@ h1 {
   font-weight: 400;
   letter-spacing: 1.4px;
   padding: 10px 0;
-  margin-bottom: 16px;
 }
 
 p {
@@ -92,7 +92,7 @@ p {
 }
 
 .img.reveal:before {
-  background: #dad7cd;
+  background: #6B705C;
   animation: blockRevealAnimation 0.8s ease forwards;
 }
 
@@ -102,16 +102,16 @@ p {
 
 @keyframes blockRevealAnimation {
   0% {
-      left: -100%;
+      top: -100%;
   }
   40% {
-      left: 0;
+      top: 0;
   }
   60% {
-      left: 0;
+      top: 0;
   }
   100% {
-      left: 100%;
+      top: 100%;
   }
 }
 @keyframes revealTextAnimation {
@@ -149,6 +149,10 @@ p {
   }
 }
 
+/***************************************************/
+
+/*****************Nav Bar ************************/
+
 header {
   background-color: #6B705C !important;
 }
@@ -162,10 +166,9 @@ header::after {
 
 nav {
   padding: 10px;
-  padding-bottom: 10px;
   float: center;
-  height: 105px;
-  max-height: 100px;
+  height: 90px;
+  max-height: 90px;
 }
 
 .nav-links {
@@ -195,7 +198,6 @@ nav ul {
 nav li {
   display: inline-block;
   margin-left: 50px;
-  padding-top: 15px;
   position: relative;
 }
 
@@ -267,6 +269,25 @@ nav a:hover {
   }
 }
 
+/***************************************************/
+
+/*************Sliding image gallery **************/
+
+.gallery-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.gallery {
+  display: flex;
+  transition: transform 2s ease;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+}
+/***************************************************/
 
 main {
   margin: 20px;
