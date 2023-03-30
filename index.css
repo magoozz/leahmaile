@@ -9,6 +9,18 @@
     flex-wrap: wrap;
     align-content: space-between;
     justify-content: space-between;
+    padding-bottom: 6%;
+    padding-top: 2%;
+  }
+
+  .index2 {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
   }
  
   .center1 {
@@ -72,6 +84,7 @@
         top: 50%;
         left: 50%;
         overflow: hidden;
+        border-radius: 30px;
     }
 
     .gallery {
