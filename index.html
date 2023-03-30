@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Leah Maile Photography</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="aos-by-red.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
     <header>
       <nav class="nav-links">
@@ -29,106 +31,49 @@
     </header>
 
     <body>
-      <div class="smooth-scroll-wrapper">
-          <div class="content">
-              <div class="container">
-                  <h1 class="text">Leah Maile Photography</h1>
-                  <div class="index1">
-                  <div class="img">
-                    <div class="movingGallery">
+    <h1>Leah Maile</h1>
+    <h2>Photography</h2>
+    <main>
+
+      <div class="index1">
+        <!------------------------------------------------------------>
+                    <div class="movingGallery" data-aos="zoom-in">
                       <div class="gallery"> 
                         <img src="photos/index1.jpg" alt="abby infront of the B" />
                         <img src="photos/index2.jpg" alt="abby infront of the B" />
                         <img src="photos/index3.jpg" alt="abby infront of the B" />
+                        <img src="photos/index5.jpg" alt="abby infront of the B" />
+                        <img src="photos/index4.jpg" alt="abby infront of the B" />
                       </div>
                     </div>
+        <!-- ------------------------------------------------------------->
+                  <div class="center1" data-aos="fade-left">
+                    <div class="text1">
+                      <p>Here to capture your special moments!</p>
+                    </div>
+                    <div class="text2">
+                      <p>Lifestyle photography based in Boise, ID</p>
+                    </div>
+                      <div class="button">
+                        <a href="portfolio.html" class="btn">View My Portfolio</a>
+                      </div>
                   </div>
-                  <div class="indexText1">
-                  <p class="text">
-                      Here to capture your special moments!
-                      Lifestyle photography based in Boise, ID *view portfolio*
-                  </p>
-                  </div>
-                </div>
-              </div>
-              <div class="container">
-                  <h1 class="text">Enemey of boring</h1>
-                  <div class="img">
-                      <img src="photos/index2.jpg" alt="" />
-                  </div>
-                  <p class="text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ut quis
-                      quaerat error soluta. Provident tempora omnis distinctio quibusdam minus
-                      nesciunt sunt.
-                  </p>
-              </div>
 
-              <div class="container">
-                  <h1 class="text">(R)evolution high</h1>
-                  <div class="img">
-                      <img src="photos/index3.jpg" alt="" />
-                  </div>
-                  <p class="text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate illum
-                      sequi enim fugiat, temporibus tempore veritatis minus maxime, voluptates
-                      tempora similique vel. Tempora harum pariatur ipsa.
-                  </p>
-              </div>
-          </div>
-      </div>
-    <script>
-      const body = document.body,
-          scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
-          height = scrollWrap.getBoundingClientRect().height - 1,
-          speed = 0.04;
+        <!-- ------------------------------------------------------------->
+                  <div class="right1">
+                       I am div 1
+                 </div>
+      <!-- ------------------------------------------------------------->
+       </div>
 
-      var offset = 0;
-
-      body.style.height = Math.floor(height) + "px";
-
-      function smoothScroll() {
-          offset += (window.pageYOffset - offset) * speed;
-
-          var scroll = "translateY(-" + offset + "px) translateZ(0)";
-          scrollWrap.style.transform = scroll;
-
-          callScroll = requestAnimationFrame(smoothScroll);
-      }
-
-      smoothScroll();
-
-      $(function () {
-          var elements = $(".text, .img").toArray();
-          $(window).scroll(function () {
-              elements.forEach(function (item) {
-                  if ($(this).scrollTop() >= $(item).offset().top - 400) {
-                      $(item).addClass("reveal");
-                  }
+            <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+            <script>
+              AOS.init({
+                duration: 3000,
+                once: true,
               });
-          });
-          elements.forEach(function (item) {
-              if ($(this).scrollTop() >= $(item).offset().top - 400) {
-                  $(item).addClass("reveal");
-              }
-          });
-      });
-  </script>
-
-  <script>
-    let gallery = document.querySelector(".gallery");
-    let images = document.querySelectorAll(".gallery img");
-    let currentIndex = 0;
-    let slideInterval = setInterval(nextSlide, 3000);
-
-  function nextSlide() {
-  currentIndex++;
-  if (currentIndex === images.length) {
-    currentIndex = 0;
-  }
-  let translateValue = -gallery.clientWidth * currentIndex;
-  gallery.style.transform = `translateX(${translateValue}px)`;
-}
-  </script>
+            </script>
+    </main>
     <footer>
       <p>&copy; Leah Maile Photography. All rights reserved.</p>
     </footer>

@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Trocchi:regular);
+
 html, body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -14,25 +16,26 @@ body {
   overflow-x: hidden;
 }
 
-.content {
-  width: 85%;
-  margin: auto;
-}
-
-.container {
-  margin: 0px 0;
-  display: flex;
-  flex-direction: column;
-}
-
 h1 {
   text-transform: uppercase;
+  font-family: "monument extended";
   color: #dad7cd;
-  font-family: "Monument Extended";
-  font-size: 60px;
+  font-size: 100px;
   font-weight: 400;
-  letter-spacing: 1.4px;
-  padding: 10px 0;
+  letter-spacing: 17px;
+  position: relative;
+  text-align: center;
+}
+
+h2 {
+  text-transform: uppercase;
+  color: #dad7cd;
+  font-family: "Trocchi";
+  font-size: 120px;
+  font-weight: 400;
+  letter-spacing: 17px;
+  position: relative;
+  text-align: center;
 }
 
 p {
@@ -41,110 +44,6 @@ p {
   color: #dad7cd;
 }
 
-.text {
-  color: transparent;
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-  transition: 0.8s;
-}
-.text.reveal {
-  color: #dad7cd;
-  animation: revealTextAnimation 0.64s ease forwards;
-}
-.text:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  /*   z-index: 1; */
-}
-.text.reveal:before {
-  background: #6B705C;
-  animation: blockRevealAnimation 0.8s ease forwards;
-}
-
-.img {
-  position: relative;
-  display: block;
-  overflow: hidden;
-}
-
-.img img {
-  max-width: 100%;
-  opacity: 0;
-}
-
-.img:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-}
-
-.img.reveal:before {
-  background: #6B705C;
-  animation: blockRevealAnimation 0.8s ease forwards;
-}
-
-.img.reveal img {
-  animation: revealImgAnimation 0.8s ease forwards;
-}
-
-@keyframes blockRevealAnimation {
-  0% {
-      top: -100%;
-  }
-  40% {
-      top: 0;
-  }
-  60% {
-      top: 0;
-  }
-  100% {
-      top: 100%;
-  }
-}
-@keyframes revealTextAnimation {
-  0% {
-      color: transparent;
-  }
-  40% {
-      color: transparent;
-  }
-  60% {
-      color: #6B705C;
-  }
-}
-@keyframes revealImgAnimation {
-  0% {
-      opacity: 0;
-  }
-  60% {
-      opacity: 0;
-  }
-  100% {
-      opacity: 1;
-  }
-}
-
-@media (max-width: 990px) {
-  .content {
-      width: 100%;
-  }
-  h1 {
-      font-size: 20px;
-  }
-  p {
-      font-size: 16px;
-  }
-}
-
-/***************************************************/
 
 /*****************Nav Bar ************************/
 
@@ -267,38 +166,52 @@ nav a:hover {
 
 /***************************************************/
 
-/*************Sliding image gallery **************/
+/******************button***********************/
 
-.gallery-container {
-  width: 50%;
-}
-
-.gallery {
+.button {
   display: flex;
-  transition: transform 2.5s ease;
-}
-
-.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-.index1 {
-  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
-.movingGallery {
-  display: flex;
-  transition: transform 2s ease;
+.btn {
+  text-decoration: none;
+  padding: 12px 20px;
+  margin: 10px;
+  font-size: 1.25rem;
+  position: relative;
+  background: #dad7cd;
+  color: #6B705C;
+  border-radius: 30px;
+  transform: transform 0.3s ease;
+  width: 200px;
+  font-size: 40px;
 }
 
-.img.reveal {
-  width: 80%;
+.btn::after, .btn::before {
+  content: '';
+  position: absolute;
+  opacity: 0.3;
+  background: #dad7cd;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: 30px;
+  transition: transform 0.3s ease;
 }
 
-.indexText1 {
- padding: 100px;
+.btn:hover {
+  transform: translate(-12px, -12px);
+}
+
+.btn:hover::after {
+  transform: translate(6px, 6px);
+}
+
+.btn:hover::before {
+  transform: translate(12px, 12px);
 }
 
 /***************************************************/

@@ -1,0 +1,117 @@
+
+
+
+.index1{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+  }
+ 
+  .center1 {
+    width: 29%;
+    height: auto;
+    display: flex;
+    background-color: #6B705C !important;
+    color: black;
+    border-radius: 7px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text1 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .text2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .center1.button {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  .right1 {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #1cd8d2, #93edc7);
+    color: white;
+    margin: 50px 0; /* changed from margin: 100px 0; */
+    border-radius: 7px;
+  }
+  
+
+  /*************Sliding image gallery **************/
+    .movingGallery {
+        width: 29%;
+        height: auto;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        overflow: hidden;
+    }
+
+    .gallery {
+        width: 100%;
+        display: flex;
+        animation: slide 30s infinite;
+        transition: transform 2.5s ease forward;
+    }
+  
+    @keyframes slide {
+        0% {
+            transform: translateX(0);
+        }
+        25% {
+            transform: translateX(0);
+        }
+        30% {
+            transform: translateX(-100%);
+        }
+        50% {
+            transform: translateX(-100%);
+        }
+        55% {
+            transform: translateX(-200%);
+        }
+        75% {
+            transform: translateX(-200%);
+        }        
+        80% {
+            transform: translateX(-300%);
+        }        
+        100% {
+            transform: translateX(-300%);
+        }
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 30px;
+    }
+  
+  /***************************************************/

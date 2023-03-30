@@ -3,6 +3,9 @@
   <head>
     <title>Info - Leah Maile Photography</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="aos-by-red.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <header>
@@ -26,8 +29,39 @@
       </nav>
     </header>
     <main>
-      <h2>About Leah Maile Photography</h2>
-      <p>Hello! My name is Leah Scott and I am located in Boise, Idaho. I currently attend Boise State University and I am on my path of becoming a teacher but I have always had a strong love for photography. There is so much beauty around us and capturing it brings me so much joy. </p>
+
+      <div class="index1">
+        <!------------------------------------------------------------>
+                    <div class="movingGallery" data-aos="zoom-in">
+                      <div class="gallery"> 
+                        <img src="photos/index1.jpg" alt="abby infront of the B" />
+                        <img src="photos/index2.jpg" alt="abby infront of the B" />
+                        <img src="photos/index3.jpg" alt="abby infront of the B" />
+                        <img src="photos/index5.jpg" alt="abby infront of the B" />
+                        <img src="photos/index4.jpg" alt="abby infront of the B" />
+                      </div>
+                    </div>
+        <!-- ------------------------------------------------------------->
+                  <div class="div" data-aos="fade-left">
+                    Here to capture your special moments!<br>
+                  
+                    Lifestyle photography based in Boise, ID
+                  </p>
+                  <div class="button" data-aos="fade-up">
+                    <a href="portfolio.html" class="btn">View My Portfolio</a>
+                  </div>
+ 
+                  </div>
+        <!-- ------------------------------------------------------------->
+       </div>
+
+            <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+            <script>
+              AOS.init({
+                duration: 3000,
+                once: true,
+              });
+            </script>
     </main>
     <footer>
       <p>&copy; Leah Maile Photography. All rights reserved.</p>
