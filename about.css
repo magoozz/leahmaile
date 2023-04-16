@@ -46,7 +46,7 @@
   }
   
   #hero {
-    background-image: url('your-hero-image.jpg');
+    background-image: url('photos/emily/hero.jpg');
     background-position: center;
     background-size: cover;
     height: 100vh;
