@@ -72,19 +72,20 @@
 
   #carousel-info-wrapper {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 100px 0;
   }
   
   #carousel-section {
-    flex: 1;
-    margin-right: 20px;
+    width: 100%;
+    max-width: 600px; /* Set a maximum width for the carousel */
   }
   
   #carousel {
     position: relative;
-    height: 400px;
+    padding-top: 133.33%; /* Adjust this value based on the aspect ratio of your vertical photos, e.g., 4:3 aspect ratio = 133.33% */
     overflow: hidden;
   }
   
@@ -96,7 +97,7 @@
     height: 100%;
     background-size: cover;
     background-position: center;
-    transition: transform 4s ease forward;
+    transition: left 1s ease;
   }
   
   .carousel-slide:first-child {
@@ -104,9 +105,10 @@
   }
   
   #photographer-info {
-    flex: 1;
-    margin-left: 20px;
+    width: 100%;
+    max-width: 600px; /* Set a maximum width for the photographer's information */
     text-align: center;
+    margin-top: 20px;
   }
   
   #photographer-info h2 {
