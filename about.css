@@ -146,14 +146,7 @@
   }
   
 
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
-}
+
 
 /* Add this code to your styles.css file */
 #vertical-carousel {
