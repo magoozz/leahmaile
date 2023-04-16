@@ -30,15 +30,17 @@ setInterval(moveCarousel, 3000);
 
 
 
-/* Replace the previous vertical carousel code in your scripts.js file */
-document.addEventListener('DOMContentLoaded', function () {
-  var horizontalCarousel = new Swiper('.swiper-container', {
-    direction: 'horizontal', // Change the direction to horizontal
-    loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-  });
-});
+const carousel2 = document.querySelector('.carousel2');
+const carousel2Slides = document.querySelector('.carousel2-slides');
+let imageIndex = 0;
+
+function moveRight() {
+    imageIndex++;
+    if (imageIndex >= carousel2Slides.children.length) {
+        imageIndex = 0;
+    }
+    carousel2Slides.style.transform = `translateY(-${imageIndex * 100}%)`;
+}
+
+setInterval(moveRight, 3000); // Adjust the timing as needed
 

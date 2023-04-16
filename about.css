@@ -148,28 +148,25 @@
 
 
 
-  #vertical-carousel {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .swiper-container {
-    width: 300px; /* Update width and height for the horizontal aspect */
-    height: 200px;
+  .carousel2 {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
     margin: 0 auto;
-  }
-  
-  .swiper-slide {
+}
+
+.carousel2-slides {
     display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .swiper-slide img {
+    flex-direction: column;
+    transition: transform 0.5s;
+}
+
+.carousel2-slides img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+}
   
 
   
