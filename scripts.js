@@ -39,7 +39,8 @@ function moveRight() {
     if (imageIndex >= carousel2Slides.children.length) {
         imageIndex = 0;
     }
-    carousel2Slides.style.transform = `translateY(-${imageIndex * 100}%)`;
+    // Change translateY to translateX
+    carousel2Slides.style.transform = `translateX(-${imageIndex * 100}%)`;
 }
 
 setInterval(moveRight, 3000); // Adjust the timing as needed
