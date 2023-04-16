@@ -30,7 +30,7 @@ setInterval(moveCarousel, 3000);
 
 
 
-
+/* Add this code to your scripts.js file */
 const carousel2 = document.querySelector('.carousel2');
 const carousel2Slides = document.querySelector('.carousel2-slides');
 let imageIndex = 0;
@@ -45,4 +45,3 @@ function moveRight() {
 
 setInterval(moveRight, 3000); // Adjust the timing as needed
 
-  
