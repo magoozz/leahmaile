@@ -210,4 +210,29 @@
     background-color: #555;
   }
   
+
+  footer {
+    background-color: #333;
+    padding: 20px 0;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .social-link {
+    display: inline-block;
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .social-link:hover {
+    color: #555;
+  }
+  
   
