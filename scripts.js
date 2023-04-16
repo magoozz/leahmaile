@@ -40,4 +40,9 @@ document.addEventListener("DOMContentLoaded", function () {
       loop: true,
     });
   });
+
+  var swiper = new Swiper('.swiper-container', {
+    lazy: true,
+  });
+  
   
