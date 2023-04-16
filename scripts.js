@@ -27,3 +27,18 @@ function moveCarousel() {
 }
 
 setInterval(moveCarousel, 3000);
+
+
+let carouselIndex = 0;
+const carouselPhotos = document.querySelectorAll('.carousel-photo');
+const carouselInner = document.querySelector('.carousel-inner');
+
+function slideCarousel() {
+  carouselIndex++;
+  if (carouselIndex > carouselPhotos.length - 3) {
+    carouselIndex = 0;
+  }
+  carouselInner.style.transform = `translateX(-${carouselIndex * 33.33}%)`;
+}
+
+setInterval(slideCarousel, 3000);
