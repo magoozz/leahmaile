@@ -65,7 +65,6 @@
     background-size: cover;
     color: #eee2df; 
     height: 100vh;
-    padding-right: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -147,18 +146,28 @@
   }
   
 
-.swiper-container {
-  width: 100%;
-  height: 600px;
-  padding-right: 20%;
-}
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  background-repeat: repeat;
-}
+  .carousel3 {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
   
+  .carousel3-inner {
+    display: flex;
+    transition: transform 1s ease;
+  }
+  
+  .carousel3-photo {
+    flex: 0 0 33.33%;
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+
   
   #cta {
     position: relative;
