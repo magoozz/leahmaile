@@ -146,28 +146,17 @@
   }
   
 
-  .carousel3 {
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .carousel3-inner {
-    display: flex;
-    transition: transform 1s ease;
-  }
-  
-  .carousel-photo {
-    flex: 0 0 33.33%;
-    height: 400px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  
+.swiper-container {
+  width: 100%;
+  height: 400px;
+}
 
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+  
   
   #cta {
     position: relative;
