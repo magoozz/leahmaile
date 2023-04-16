@@ -63,11 +63,11 @@
     background-image: url('photos/emily/hero.jpg');
     background-position: center;
     background-size: cover;
+    color: #eee2df; 
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
     text-align: center;
   }
   
@@ -116,6 +116,12 @@
   
   .carousel-slide:first-child {
     left: 0;
+  }
+
+  #special-moments {
+    display: flex;
+    flex-direction: column;
+
   }
   
   #photographer-info {
@@ -171,6 +177,7 @@
   #cta {
     position: relative;
     height: 400px;
+    color:#eee2df;
   }
   
   .cta-container {
@@ -212,7 +219,7 @@
   
 
   footer {
-    background-color: #333;
+    background-color: #eee2df;
     padding: 20px 0;
   }
   
@@ -232,7 +239,7 @@
   }
   
   .social-link:hover {
-    color: #555;
+    color: white;
   }
   
   
