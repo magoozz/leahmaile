@@ -96,7 +96,7 @@
     height: 100%;
     background-size: cover;
     background-position: center;
-    transition: left 2s ease;
+    transition: transform 4s ease forward;
   }
   
   .carousel-slide:first-child {
