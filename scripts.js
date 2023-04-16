@@ -15,3 +15,15 @@ function checkScroll() {
 
 window.addEventListener('scroll', checkScroll);
 window.addEventListener('load', checkScroll);
+
+
+const carouselSlides = document.querySelectorAll('.carousel-slide');
+let currentSlide = 0;
+
+function moveCarousel() {
+  carouselSlides[currentSlide].style.left = '-100%';
+  currentSlide = (currentSlide + 1) % carouselSlides.length;
+  carouselSlides[currentSlide].style.left = '0';
+}
+
+setInterval(moveCarousel, 3000);
