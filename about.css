@@ -13,37 +13,51 @@
   }
   
   #toolbar {
-    background-color: rgba(0, 0, 0, 0.8);
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     height: 60px;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .toolbar-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    transform: translateY(-100%);
-    transition: transform 0.3s ease;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 20px;
   }
   
-  #toolbar:hover {
-    transform: translateY(0);
+  .logo {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
   }
   
-  #toolbar ul {
+  .menu {
     display: flex;
     list-style-type: none;
   }
   
-  #toolbar li {
-    margin: 0 20px;
+  .menu li {
+    position: relative;
+    margin: 0 15px;
   }
   
-  #toolbar a {
+  .menu a {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    transition: all 0.3s ease;
   }
+  
+  .menu a:hover {
+    transform: scale(1.2);
+  }
+  
   
   #hero {
     background-image: url('photos/emily/hero.jpg');
