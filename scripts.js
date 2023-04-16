@@ -30,15 +30,15 @@ setInterval(moveCarousel, 3000);
 
 
 
-/* Add this code to your scripts.js file */
+/* Replace the previous vertical carousel code in your scripts.js file */
 document.addEventListener('DOMContentLoaded', function () {
-    var verticalCarousel = new Swiper('.swiper-container', {
-      direction: 'vertical',
-      loop: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-    });
+  var horizontalCarousel = new Swiper('.swiper-container', {
+    direction: 'horizontal', // Change the direction to horizontal
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
   });
-  
+});
+

@@ -148,15 +148,14 @@
 
 
 
-/* Add this code to your styles.css file */
-#vertical-carousel {
+  #vertical-carousel {
     text-align: center;
     padding: 20px;
   }
   
   .swiper-container {
-    width: 200px;
-    height: 300px;
+    width: 300px; /* Update width and height for the horizontal aspect */
+    height: 200px;
     margin: 0 auto;
   }
   
