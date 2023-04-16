@@ -72,8 +72,8 @@
 
   #carousel-info-wrapper {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction:row;
+    justify-content: space-around;
     align-items: center;
     margin: 100px 0;
   }
@@ -97,7 +97,7 @@
     height: 100%;
     background-size: cover;
     background-position: center;
-    transition: left 1s ease;
+    transition: transform 4s ease forward;
   }
   
   .carousel-slide:first-child {
