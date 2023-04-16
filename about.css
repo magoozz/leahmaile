@@ -158,7 +158,7 @@
 
 .carousel2-slides {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     transition: transform 0.5s;
 }
 
