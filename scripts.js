@@ -29,20 +29,20 @@ function moveCarousel() {
 setInterval(moveCarousel, 3000);
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    new Swiper(".swiper-container", {
-      slidesPerView: 3,
-      spaceBetween: 10,
-      autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-      },
-      loop: true,
-    });
-  });
 
-  var swiper = new Swiper('.swiper-container', {
-    lazy: true,
-  });
-  
+
+const carousel2 = document.querySelector('.carousel2');
+const carousel2Slides = document.querySelector('.carousel2-slides');
+let imageIndex = 0;
+
+function moveRight() {
+    imageIndex++;
+    if (imageIndex >= carousel2Slides.children.length) {
+        imageIndex = 0;
+    }
+    carousel2Slides.style.transform = `translateY(-${imageIndex * 100}%)`;
+}
+
+setInterval(moveRight, 3000); // Adjust the timing as needed
+
   
