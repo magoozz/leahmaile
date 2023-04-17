@@ -184,6 +184,46 @@
 
   
 
+/* Add this code to your styles.css file */
+#testimonials {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.testimonials-container {
+  position: relative;
+  display: inline-block;
+}
+
+.testimonial-slide {
+  display: none;
+}
+
+.testimonial-slide.active {
+  display: block;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.prev {
+  left: -2rem;
+}
+
+.next {
+  right: -2rem;
+}
+
+
+
+
   
   
   #cta {

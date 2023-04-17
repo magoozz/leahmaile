@@ -60,3 +60,22 @@ setInterval(moveRight, 4050); // Adjust the timing as needed
 
 
 
+
+/* Add this code to your scripts.js file */
+let currentTestimonial = 0;
+const testimonials = document.getElementsByClassName('testimonial-slide');
+
+function changeTestimonial(direction) {
+  testimonials[currentTestimonial].classList.remove('active');
+  currentTestimonial += direction;
+
+  if (currentTestimonial < 0) {
+    currentTestimonial = testimonials.length - 1;
+  } else if (currentTestimonial >= testimonials.length) {
+    currentTestimonial = 0;
+  }
+
+  testimonials[currentTestimonial].classList.add('active');
+}
+
+
