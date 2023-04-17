@@ -56,7 +56,7 @@ function moveRight() {
     }
 }
 
-setInterval(moveRight, 4000); // Adjust the timing as needed
+setInterval(moveRight, 4050); // Adjust the timing as needed
 
 
 
