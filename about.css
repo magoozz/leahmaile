@@ -148,30 +148,32 @@
 
 
 
-  .carousel2 {
-    position: relative;
-    width: 100%;
-    max-width: 900px;
-    height: 200px;
-    overflow: hidden;
-    margin: 0 auto;
+/* Add this code to your styles.css file */
+.carousel2 {
+  position: relative;
+  width: 100%;
+  max-width: 1500px;
+  height: 200px;
+  overflow: hidden;
+  margin: 0 auto;
 }
 
 .carousel2-slides {
-    display: flex;
-    transition: transform 0.5s;
+  display: flex;
+  transition: transform 0.5s;
 }
 
 .carousel2-slides img {
-    width: calc(100% / 3 - 10px); /* Display 3 images at a time with 10px space between them */
-    height: 100%;
-    object-fit: cover;
-    margin-right: 10px; /* Add space between the images */
+  width: calc(100% / 5 - 10px); /* Display 5 images at a time with 10px space between them */
+  height: 100%;
+  object-fit: cover;
+  margin-right: 10px; /* Add space between the images */
 }
 
 .carousel2-slides img:last-child {
-    margin-right: 0; /* Remove margin from the last image */
+  margin-right: 0; /* Remove margin from the last image */
 }
+
   
 
   
