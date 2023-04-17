@@ -36,7 +36,7 @@ const carousel2Slides = document.querySelector('.carousel2-slides');
 let imageIndex = 0;
 
 // Clone the first five images and append them to the end of the carousel
-for (let i = 0; i < 4; i++) {
+for (let i = 0; i < 5; i++) {
     const clonedImage = carousel2Slides.children[i].cloneNode(true);
     carousel2Slides.appendChild(clonedImage);
 }
@@ -44,15 +44,15 @@ for (let i = 0; i < 4; i++) {
 function moveRight() {
     imageIndex++;
     carousel2Slides.style.transition = 'transform 0.5s';
-    carousel2Slides.style.transform = `translateX(-${imageIndex * (100 / 4)}%)`;
+    carousel2Slides.style.transform = `translateX(-${imageIndex * (100 / 5)}%)`;
 
     // When the last cloned image is displayed, reset the image index and translateX property
-    if (imageIndex === carousel2Slides.children.length - 4) {
+    if (imageIndex === carousel2Slides.children.length - 5) {
         setTimeout(() => {
             carousel2Slides.style.transition = 'none';
             carousel2Slides.style.transform = 'translateX(0)';
             imageIndex = 0;
-        }, 400);
+        }, 500);
     }
 }
 

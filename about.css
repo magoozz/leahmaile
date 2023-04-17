@@ -165,7 +165,7 @@
 }
 
 .carousel2-slides img {
-  width: calc(100% / 4 - 10px); /* Display 5 images at a time with 10px space between them */
+  width: calc(100% / 5 - 10px); /* Display 5 images at a time with 10px space between them */
   height: 100%;
   object-fit: cover;
   margin-right: 10px; /* Add space between the images */
