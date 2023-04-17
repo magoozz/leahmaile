@@ -150,22 +150,27 @@
 
   .carousel2 {
     position: relative;
-    width: 200px;
-    height: 300px;
+    width: 100%;
+    max-width: 900px;
+    height: 200px;
     overflow: hidden;
     margin: 0 auto;
 }
 
 .carousel2-slides {
     display: flex;
-    flex-direction: row;
     transition: transform 0.5s;
 }
 
 .carousel2-slides img {
-    width: 100%;
+    width: calc(100% / 3 - 10px); /* Display 3 images at a time with 10px space between them */
     height: 100%;
     object-fit: cover;
+    margin-right: 10px; /* Add space between the images */
+}
+
+.carousel2-slides img:last-child {
+    margin-right: 0; /* Remove margin from the last image */
 }
   
 

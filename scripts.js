@@ -30,17 +30,15 @@ setInterval(moveCarousel, 3000);
 
 
 
-const carousel2 = document.querySelector('.carousel2');
 const carousel2Slides = document.querySelector('.carousel2-slides');
 let imageIndex = 0;
 
 function moveRight() {
     imageIndex++;
-    if (imageIndex >= carousel2Slides.children.length) {
+    if (imageIndex >= carousel2Slides.children.length - 2) { // Update this line to stop at the correct image
         imageIndex = 0;
     }
-    // Change translateY to translateX
-    carousel2Slides.style.transform = `translateX(-${imageIndex * 100}%)`;
+    carousel2Slides.style.transform = `translateX(-${imageIndex * (100 / 3)}%)`; // Update the translate percentage
 }
 
 setInterval(moveRight, 3000); // Adjust the timing as needed
