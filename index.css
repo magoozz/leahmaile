@@ -1,133 +1,311 @@
-  .index1 {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    align-items: row;
-    flex-wrap: wrap;
-    align-content: space-between;
-    justify-content: space-between;
-    padding-top: 2%;
-  }
-  
-  .index2 {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    align-items: row;
-    flex-wrap: wrap;
-    align-content: space-between;
-    justify-content: space-between;
-    padding-top: 2%;
-  }
- 
-  .center1 {
-    width: 29%;
-    height: auto;
-    display: flex;
-    background-color: #eee2df !important;
-    color: black;
-    border-radius: 7px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+* {
 
-  .text1 {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-  }
+  box-sizing: border-box;
+}
 
-  .text2 {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-  }
+body {
+  font-family: Arial, sans-serif;
+}
 
-  .center1.button {
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    padding: 10px;
-  }
-  
-  .right1 {
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-    height: 300px;
-    width: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to right, #1cd8d2, #93edc7);
-    color: white;
-    margin: 50px 0; /* changed from margin: 100px 0; */
-    border-radius: 7px;
-  }
-  
+header {
+  position: relative;
+}
 
-  /*************Sliding image gallery **************/
-  .index1 img{
-    width: 110%;
-  }
+#toolbar {
+  position: absolute;
+  height: 90px;
+  width: 100vw;
+  background-color: #eee2df;
+}
 
-  /*************Sliding image gallery **************/
-    .movingGallery {
-        width: 29%;
-        height: auto;
-        transform: translate(-50%, -50%);
-        top: 50%;
-        left: 50%;
-        overflow: hidden;
-        border: 4px solid #6B705C;
-        border-radius: 40px;
-    }
+.toolbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 80%;
+  padding: 0 20px;
+}
 
-    .gallery {
-        width: 100%;
-        display: flex;
-        animation: slide 30s infinite;
-        transition: transform 2.5s ease forward;
-    }
-  
-    @keyframes slide {
-        0% {
-            transform: translateX(0);
-        }
-        25% {
-            transform: translateX(0);
-        }
-        30% {
-            transform: translateX(-100%);
-        }
-        50% {
-            transform: translateX(-100%);
-        }
-        55% {
-            transform: translateX(-200%);
-        }
-        75% {
-            transform: translateX(-200%);
-        }        
-        80% {
-            transform: translateX(-300%);
-        }        
-        100% {
-            transform: translateX(-300%);
-        }
-    }
+.logo {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+}
 
-    .gallery img {
-        width: 100%;
-        height: auto;
-        border-radius: 30px;
-    }
-  
-  /***************************************************/
+.menu {
+  display: flex;
+  list-style-type: none;
+}
+
+.menu li {
+  position: relative;
+  margin: 0 15px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.menu a:hover {
+  transform: scale(1.2);
+}
+
+
+#hero {
+  background-image: url('photos/emily/hero.jpg');
+  background-position: center;
+  background-size: cover;
+  color: #eee2df; 
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.scroll-section {
+  margin: 100px 0;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+#carousel-info-wrapper {
+  display: flex;
+  flex-direction:row;
+  justify-content:  flex-end;
+  align-items: center;
+}
+
+#carousel-section {
+  width: 100%;
+  max-width: 600px; /* Set a maximum width for the carousel */
+}
+
+#carousel {
+  position: relative;
+  padding-top: 133.33%; /* Adjust this value based on the aspect ratio of your vertical photos, e.g., 4:3 aspect ratio = 133.33% */
+  overflow: hidden;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 4s ease forward;
+}
+
+.carousel-slide:first-child {
+  left: 0;
+}
+
+#special-moments {
+  display: flex;
+  flex-direction: column;
+
+}
+
+#photographer-info {
+  width: 100%;
+  max-width: 600px; /* Set a maximum width for the photographer's information */
+  text-align: center;
+  margin-top: 20px;
+}
+
+#photographer-info h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+#photographer-info p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+#photo-gallery {
+  margin: 100px 0;
+}
+
+
+
+
+/* Five photo carousel */
+.carousel2-wrapper {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 115%;
+height: 80%;
+}
+
+.carousel2 {
+position: relative;
+max-width: 1500px;
+overflow: hidden; /* Hide the images that slide out of frame */
+margin: 0 auto;
+}
+
+.carousel2-slides {
+display: flex;
+transition: transform 0.5s;
+}
+
+.carousel2-slides img {
+width: calc(100% / 5 - 10px); /* Display 5 images at a time with 10px space between them */
+height: 90%;
+object-fit: cover;
+object-position: center;
+margin-right: 10px; /* Add space between the images */
+}
+
+.carousel2-slides img:last-child {
+margin-right: 0; /* Remove margin from the last image */
+}
+
+
+
+
+/* Add this code to your styles.css file */
+#testimonials {
+text-align: center;
+padding: 2rem 0;
+background-color: #6B705C;
+width: 100vw;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.testimonials-container {
+position: relative;
+display: inline-block;
+}
+
+.testimonials-container  h2{
+color: #eee2df;
+font-size: medium;
+letter-spacing: 1px;
+text-transform: lowercase;
+}
+
+.testimonials-container  h3{
+color: #eee2df;
+font-size: large;
+}
+
+.testimonial-slide {
+display: none;
+}
+
+.testimonial-slide.active {
+display: block;
+}
+
+.arrow {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+background-color: transparent;
+border: none;
+font-size: 2rem;
+cursor: pointer;
+}
+
+.prev {
+left: -2rem;
+}
+
+.next {
+right: -2rem;
+}
+
+
+
+
+
+
+#cta {
+  position: relative;
+  height: 400px;
+  color:#eee2df;
+  width: 100vw;
+}
+
+.cta-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.cta-container h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #555;
+}
+
+
+footer {
+  background-color: #eee2df;
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-link {
+  display: inline-block;
+  color: white;
+  font-size: 24px;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: white;
+}
