@@ -1,4 +1,5 @@
-const scrollSections = document.querySelectorAll('.scroll-section');
+/*********This creates the rendering of each section of the page as you scroll */
+const scrollSections = document.querySelectorAll('.scroll-section'); 
 
 function checkScroll() {
   scrollSections.forEach((section) => {
@@ -17,6 +18,7 @@ window.addEventListener('scroll', checkScroll);
 window.addEventListener('load', checkScroll);
 
 
+/***********This creates the slides show of just showing one image at a time */
 const carouselSlides = document.querySelectorAll('.carousel-slide');
 let currentSlide = 0;
 
@@ -30,7 +32,7 @@ setInterval(moveCarousel, 3000);
 
 
 
-/* Add this code to your scripts.js file */
+/**********This creates the carosule that shows multiple photos across the screen at once. */
 const carousel2 = document.querySelector('.carousel2');
 const carousel2Slides = document.querySelector('.carousel2-slides');
 let imageIndex = 0;
@@ -61,7 +63,7 @@ setInterval(moveRight, 4050); // Adjust the timing as needed
 
 
 
-/* Add this code to your scripts.js file */
+/******This is the section that allows you to manually scroll through the testimonials */
 let currentTestimonial = 0;
 const testimonials = document.getElementsByClassName('testimonial-slide');
 

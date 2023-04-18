@@ -1,5 +1,4 @@
 * {
-
   box-sizing: border-box;
 }
 
@@ -75,12 +74,7 @@ header {
   transition: opacity 1s ease;
 }
 
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
+/*The photos slide & text right under the hero */
 
 #carousel-info-wrapper {
   display: flex;
@@ -89,6 +83,7 @@ header {
   align-items: center;
 }
 
+/*The image */
 #carousel-section {
   width: 100%;
   max-width: 600px; /* Set a maximum width for the carousel */
@@ -114,7 +109,9 @@ header {
 .carousel-slide:first-child {
   left: 0;
 }
+/************/
 
+/*"here to capture your special moments... */
 #special-moments {
   display: flex;
   flex-direction: column;
@@ -141,7 +138,8 @@ header {
 #photo-gallery {
   margin: 100px 0;
 }
-
+/**********/
+/**********/
 
 
 
@@ -177,11 +175,11 @@ margin-right: 10px; /* Add space between the images */
 .carousel2-slides img:last-child {
 margin-right: 0; /* Remove margin from the last image */
 }
+/*************************/
 
 
 
-
-/* Add this code to your styles.css file */
+/* Testimonials */
 #testimonials {
 text-align: center;
 padding: 2rem 0;
@@ -236,11 +234,11 @@ left: -2rem;
 right: -2rem;
 }
 
+/*******************/
 
 
 
-
-
+/*The "lets work together" */
 #cta {
   position: relative;
   height: 400px;
@@ -284,8 +282,10 @@ right: -2rem;
 .cta-button:hover {
   background-color: #555;
 }
+/********/
 
 
+/* Footer */
 footer {
   background-color: #eee2df;
   padding: 20px 0;
@@ -309,3 +309,4 @@ footer {
 .social-link:hover {
   color: white;
 }
+/***************/
