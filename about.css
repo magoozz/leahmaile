@@ -198,6 +198,18 @@
   display: inline-block;
 }
 
+.testimonials-container  h2{
+  color: #eee2df;
+  font-size: medium;
+  letter-spacing: 1px;
+  text-transform: lowercase;
+}
+
+.testimonials-container  h3{
+  color: #eee2df;
+  font-size: large;
+}
+
 .testimonial-slide {
   display: none;
 }
