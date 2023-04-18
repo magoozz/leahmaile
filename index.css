@@ -23,8 +23,7 @@ header {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  height: 80%;
-  padding: 0 20px;
+  padding-bottom: 5%;
 }
 
 .logo {
@@ -66,6 +65,7 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding-top: 5%;
 }
 
 .scroll-section {
