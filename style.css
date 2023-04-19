@@ -61,89 +61,47 @@ header::after {
 }
 
 
-nav {
-  float: center;
+#toolbar {
+  position: absolute;
   height: 90px;
-  max-height: 90px;
+  width: 100vw;
+  background-color: #eee2df;
 }
 
-.nav-links {
-  background-color: #eee2df !important;
-  width: 100%;
-  margin: 0 auto;
+.toolbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 5%;
 }
 
 .logo {
-  height: 95px;
-  float: left;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  display: inline-block;
-}
-
-nav li {
-  display: inline-block;
-  margin-left: 50px;
-  position: relative;
-}
-
-nav a {
-  color: #1b1b1e;
-  font-size: 30px;
+  color: white;
+  font-size: 24px;
   text-decoration: none;
-  text-transform: uppercase;
 }
 
-/*When the mouse hovers over the different pages in the nav bar*/
-nav a:hover {
-  color: #6B705C;
-  transition: all ease-in-out 250ms;
-}
-
-/*When the mouse hovers over the logo*/
-.logo:hover {
-  transition: all ease-in-out 250ms;
-  /*change color when hovered over*/
-}
-
-.nav-links {
-  background-color: #eee2df !important;
-  width: 100%;
-  margin: 0 auto;
+.menu {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  list-style-type: none;
 }
 
-
-.nav-list a:hover::before{
-  width: 100%;
-
+.menu li {
+  position: relative;
+  margin: 0 15px;
 }
 
-/*The current "page" via the nav bar */
-.active {
-  color: #6B705C;
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
 }
 
-/*This down to the @media for phone compatability*/
-.menu{
-  display: none;
-}
-
-.menu-line {
-  width: 20px;
-  height: 3px;
-  background-color: #6B705C;
-  margin-bottom: 4px;
+.menu a:hover {
+  transform: scale(1.2);
 }
 
 /*Adjust nav bar for phone compatablility*/

@@ -7,10 +7,6 @@ body {
   font-family: Arial, sans-serif;
 }
 
-header {
-  position: relative;
-}
-
 #toolbar {
   position: absolute;
   height: 90px;
@@ -80,7 +76,7 @@ header {
 #carousel-info-wrapper {
   display: flex;
   flex-direction:row;
-  justify-content:  flex-end;
+  justify-content:  space-evenly;
   align-items: center;
 }
 
@@ -149,7 +145,7 @@ header {
 display: flex;
 justify-content: center;
 align-items: center;
-width: 115%;
+width: 100vw;
 height: 80%;
 }
 
