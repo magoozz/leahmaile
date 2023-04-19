@@ -2,11 +2,7 @@
 
 html, body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
   background-color: #eee2df !important;
-  width: 100%;
-  height: 1600px;
 }
 
 /*****************Movement of the page *******
@@ -18,19 +14,15 @@ lightest grey: d8d5db
 ***********/
 body {
   box-sizing: border-box;
-  padding: 0 120px;
   overflow-x: hidden;
 }
 
 h1 {
-
   font-family: "monument extended";
-
   font-size: 70px;
- 
   letter-spacing: 17px;
   padding: 0;
-  margin: 0 auto;
+  margin: 0;
   line-height: 1;
   position: relative;
   text-align: center;
@@ -44,9 +36,10 @@ h2 {
   position: relative;
   text-align: center;
   padding: 0;
-  margin: 0 auto;
+  margin: 0;
   line-height: .999;
 }
+
 
 p {
   font-family: Arial, Helvetica, sans-serif;
@@ -121,18 +114,13 @@ nav a:hover {
   /*change color when hovered over*/
 }
 
-.nav-links a::before {
-  content: '';
-  display: block;
-  height: 5px;
+.nav-links {
+  background-color: #eee2df !important;
   width: 100%;
-  background-color: #eddcd2;
-
-  position: absolute;
-  bottom: 0;
-  width: 0%;
-
-  transition: all ease-in-out 250ms;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 
