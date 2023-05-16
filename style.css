@@ -18,9 +18,8 @@ body {
 }
 
 h1 {
-  font-family: "monument extended";
+
   font-size: 70px;
-  letter-spacing: 17px;
   padding: 0;
   margin: 0;
   line-height: 1;
@@ -30,9 +29,8 @@ h1 {
 
 h2 {
   text-transform: uppercase;
-  font-family: "Trocchi";
   font-size: 120px;
-  letter-spacing: 17px;
+  letter-spacing: 12px;
   position: relative;
   text-align: center;
   padding: 0;
@@ -47,6 +45,11 @@ p {
   color: #6B705C;
 }
 
+.scroll-section {
+  margin: 100px 0;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
 
 /*****************Nav Bar ************************/
 
@@ -60,6 +63,91 @@ header::after {
   clear: both;
 }
 
+
+nav {
+  float: center;
+  height: 90px;
+  max-height: 90px;
+}
+
+.nav-links {
+  background-color: #eee2df !important;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 95px;
+  float: left;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  display: inline-block;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 50px;
+  position: relative;
+}
+
+nav a {
+  color: #1b1b1e;
+  font-size: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/*When the mouse hovers over the different pages in the nav bar*/
+nav a:hover {
+  color: #6B705C;
+  transition: all ease-in-out 250ms;
+}
+
+/*When the mouse hovers over the logo*/
+.logo:hover {
+  transition: all ease-in-out 250ms;
+  /*change color when hovered over*/
+}
+
+.nav-links {
+  background-color: #eee2df !important;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.nav-list a:hover::before{
+  width: 100%;
+
+}
+
+/*The current "page" via the nav bar */
+.active {
+  color: #6B705C;
+}
+
+/*This down to the @media for phone compatability*/
+.menu{
+  display: none;
+}
+
+.menu-line {
+  width: 20px;
+  height: 3px;
+  background-color: #6B705C;
+  margin-bottom: 4px;
+}
 
 #toolbar {
   position: absolute;
@@ -103,6 +191,8 @@ header::after {
 .menu a:hover {
   transform: scale(1.2);
 }
+
+
 
 /*Adjust nav bar for phone compatablility*/
 @media all and (max-width: 480px) {
@@ -168,11 +258,6 @@ header::after {
 }
 
 /***************************************************/
-
-main {
-  margin: 20px;
-}
-
 
 footer {
   background-color: #eee2df;

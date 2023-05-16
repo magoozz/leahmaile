@@ -1,71 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
-    <title>Contact - Leah Maile Photography</title>
+    <title>Contact - Leah Maile Media</title>
     <link rel="stylesheet" href="style.css">
-  </head>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="aos-by-red.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>  
+</head>
   <body>
     <header>
       <nav id="toolbar">
         <div class="toolbar-container">
-          <a h  ref="index.html" class="logo">Leah Maile Media</a>
+          <a href="index.html" class="logo">Leah Maile Media</a>
           <ul class="menu">
-            <li><a  href="about.html">About</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="info.html">Info</a></li>
             <li><a class="active" href="contact.html">Contact</a></li>
           </ul>
         </div>
       </nav>
+
     </header>
+
     <main>
-    <h2>Contact Me</h2>
-    <p>Welcome to my photography website, where I showcase my passion for capturing the beauty of the world around us. From stunning landscapes to intimate portraits, my photography reflects the unique personality of each subject and the emotion of every moment.
-
-        As a professional photographer, I am committed to delivering exceptional service and creating unforgettable images for my clients. Whether you're looking for a portrait session, wedding photography, or commercial photography, I have the skills and experience to bring your vision to life.
-        
-        If you're interested in learning more about my services or would like to discuss a photography project, please don't hesitate to reach out. I look forward to hearing from you and working together to create something truly special. Simply fill out the contact form below, and I'll be in touch soon.</p>
-    <h3>Contact Me</h3>
-    <form action="submit-form.php" method="post">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-
-
-    <div class="container">
-        <h3>Contact Form</h3>
-        <form action="submit-form.php" name="post">
-            <label for="name">Name:</label>
-            <input name="name" type="text" required placeholder="John"/>
-            <br>
-            <label for="last_name">Last Name</label>
-            <input name="last_name" type="text" required placeholder="Doe"/>
-            <br>
-            <label for="email">Email</label>
-            <input name="email" type="email" required placeholder="you@domain.com"/>
-            <br>
-            <label for="message">Message</label><br>
-            <textarea name="message" cols="30" rows="10" placeholder="Enter your message here ..." required> </textarea>
-            <div class="center">
-                <input type="submit" value="Submit">
+      <section class="scroll-section">
+        <section id="carousel-info-wrapper">
+            <div id="carousel-section">
+              <div id="carousel">
+                <div class="carousel-slide" style="background-image: url('photos/index1.jpg')"></div>
+                <div class="carousel-slide" style="background-image: url('photos/index2.jpg')"></div>
+                <div class="carousel-slide" style="background-image: url('photos/index3.jpg')"></div>
+                <div class="carousel-slide" style="background-image: url('photos/index4.jpg')"></div>
+                <div class="carousel-slide" style="background-image: url('photos/index5.jpg')"></div>
+              </div>
             </div>
-        </form>	
-    </div>
+        <div id="right-row">
+        <div id="special-moments">
+          <div id="photographer-info">
+            <h2>Book a shoot!</h2>
+              <h3> I AM YOUR PERSONAL HYPE WOMAN - making sure everything looks great, you have fun, and we create memories that will last a lifetime. I’ll be the photographer your family and friends love!! I can make anyone comfortable getting their photo taken, and can’t wait to laugh and create magic with you.</h3>
+            </div>
+          <div class="button1">
+            <a href="portfolio.html" class="btn1">View My Portfolio</a>
+          </div>
+        </div>
+          <div id = "picture3">
+            <img src="photos/contact.jpg" alt="Image 1">
+          </div>
+          </div>
+      </section>
+      </section>   
+      
+      <section class="scroll-section">
+        <section class="forms">
+        <form method="post" action="send-email.php">
+          <label>First Name:</label>
+          <input type="text" name="firstName" required>
+          <label>Last Name:</label>
+          <input type="text" name="lastName" required>
+          <label>Email:</label>
+          <input type="email" name="email" required>
+          <label>Subject:</label>
+          <input type="text" name="subject" required>
+          <label>Message:</label>
+          <textarea name="message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+      </section>
 
-    <h3>Featured Photos</h3>
-    <div class="gallery">
-      <img src="photos/index1.jpg" alt="Photo 1">
-      <img src="photos/index2.jpg" alt="Photo 2">
-      <img src="photos/index3.jpg" alt="Photo 3">
-    </div>
-  </main>
-  <footer>
-    <p>&copy; Leah Maile Photography. All rights reserved.</p>
-  </footer>
+
+      <section class="scroll-section">
+      <div class="sqs-block-content">
+        <p><strong>Booked dates in 2023<br>
+        </strong><em> </em></p>
+        <ul data-rte-list="default">
+          <li><p ><em>February 23</em></p></li>
+          <li><p><em>April 13, 15</em></p></li>
+          <li><p><em>May 20, 27</em></p></li>
+          <li><p><em>June 3, 10, 24</em></p></li>
+            <li><p><em>July 8, 22</em></p></li>
+            <li><p><em>August 26</em></p></li>
+            <li><p ><em>September 23</em></p></li>
+            <li><p><em>October 6</em></p></li>
+          </ul>
+      
+        </div>
+      </section>
+
+      <section class="scroll-section">
+        <div class="carousel2-wrapper">
+        <section id="vertical-carousel">
+          <div class="carousel2">
+            <div class="carousel2-slides">
+              <img src="photos/grad/grad_1.jpg" alt="Image 1">
+              <img src="photos/sid/sid_6.jpg" alt="Image 2">
+              <img src="photos/molly/molly_1.webp" alt="Image 3">
+              <img src="photos/grace/grace_1.jpg" alt="Image 1">
+              <img src="photos/DSC_0412 copy.jpg" alt="Image 2">
+              <img src="photos/grad/grad_7.jpg" alt="Image 3">
+          
+              <!-- Add more images as needed -->
+            </div>
+          </div>
+        </div>
+        </section>
+      </section>
+
+        <section id="cta">
+          <div class="cta-container" style="background-image: url('photos/22.webp')">
+            <section class="scroll-section">
+            <h2>Check out my other work!</h2>
+            <div class="button">
+              <a href="portfolio.html" class="btn">Take a peek!</a>
+            </div>
+        </section>        
+ 
+
+    <script src="scripts.js"></script>
   </body>
+  <footer>
+    <div class="footer-container">
+      <a href="https://www.instagram.com/leahmailes" target="_blank" class="social-link">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com/your-facebook-page" target="_blank" class="social-link">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </div>
+    <p>&copy; Leah Maile Media. All rights reserved.</p>
+  </footer>
   </html>
