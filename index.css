@@ -1,171 +1,16 @@
+
 * {
   margin: 0;
   padding: 0;
 }
 
-body {
-  font-family: Arial, sans-serif;
-}
-
-header {
-  background-color: #eee2df !important;
-}
-
-header::after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-
-nav {
-  float: center;
-  height: 90px;
-  max-height: 90px;
-}
-
-.nav-links {
-  background-color: #eee2df !important;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  height: 95px;
-  float: left;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  display: inline-block;
-}
-
-nav li {
-  display: inline-block;
-  margin-left: 50px;
-  position: relative;
-}
-
-nav a {
-  color: #1b1b1e;
-  font-size: 30px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-/*When the mouse hovers over the different pages in the nav bar*/
-nav a:hover {
-  color: #6B705C;
-  transition: all ease-in-out 250ms;
-}
-
-/*When the mouse hovers over the logo*/
-.logo:hover {
-  transition: all ease-in-out 250ms;
-  /*change color when hovered over*/
-}
-
-.nav-links {
-  background-color: #eee2df !important;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-
-.nav-list a:hover::before{
-  width: 100%;
-
-}
-
-/*The current "page" via the nav bar */
-.active {
-  color: #6B705C;
-}
-
-/*This down to the @media for phone compatability*/
-.menu{
-  display: none;
-}
-
-.menu-line {
-  width: 20px;
-  height: 3px;
-  background-color: #6B705C;
-  margin-bottom: 4px;
-}
-
-#toolbar {
-  position: absolute;
-  height: 90px;
-  width: 100vw;
-  background-color: #eee2df;
-}
-
-.toolbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-bottom: 5%;
-}
-
-.logo {
-  color: white;
-  font-size: 24px;
-  text-decoration: none;
-}
-
-.menu {
-  display: flex;
-  list-style-type: none;
-}
-
-.menu li {
-  position: relative;
-  margin: 0 15px;
-}
-
-.menu a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  transition: all 0.3s ease;
-}
-
-.menu a:hover {
-  transform: scale(1.2);
-}
-
-
-/*Adjust nav bar for phone compatablility*/
-@media all and (max-width: 480px) {
-  .nav-links {
-    flex-direction: column;
-  }
-  .media {
-    display: block;
-    position: absolute;
-    right: 15px;
-    top: 15px;
-  }
-}
 
 
 #hero {
-  background-image: url('photos/emily/hero.jpg');
+  pointer-events: none;
   background-position: center;
   background-size: cover;
-  color: #eee2df; 
+  color: #005f73; 
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -174,6 +19,10 @@ nav a:hover {
   text-align: center;
   padding-top: 5%;
   font-family: 'Roboto Slab';
+}
+
+#hero-text {
+  float: right;
 }
 
 .scroll-section {
@@ -190,13 +39,14 @@ nav a:hover {
   justify-content:  space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  height: 65vw;
+  background-color: #005f73;
+  width: 100vw;
 }
 
 /*The image */
 #carousel-section {
   width: 50%;
-  max-width: 40%; /* Set a maximum width for the carousel */
+  max-width: 100%; /* Set a maximum width for the carousel */
 }
 
 #carousel {
@@ -215,7 +65,7 @@ nav a:hover {
   background-size: cover;
   background-position: center;
   transition: transform 4s ease forward;
-  border-radius: 10%;
+
 }
 
 .carousel-slide:first-child {
@@ -228,23 +78,19 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50%;
+  width: 40%;
 }
 
 #special-moments {
   display: flex;
   flex-direction: column;
-  background-color: #6B705C;
-  border-radius: 10%;
-  width: 60%;
+  height: relative;
 }
 
 #photographer-info {
   width: 100%;
-  max-width: 600px; /* Set a maximum width for the photographer's information */
   text-align: center;
-  margin-top: 20px;
-  padding-top: 5%;
+  background-color: #005f73;
 }
 
 #photographer-info h2 {
@@ -256,7 +102,7 @@ nav a:hover {
   text-align: center;
   line-height: 1.5;
   padding-bottom: 5%;
-  color: #eee2df;
+  color: #84a59d;
 }
 
 #photographer-info h3 {
@@ -264,67 +110,6 @@ nav a:hover {
   font-size: 100%;
   line-height: 1.5;
 }
-
-#photo-gallery {
-  margin: 100px 0;
-}
-
-#picture3 {
-  display: flex;
-  flex-direction: column;
-  padding-top: 5%;
-  width: 50%;
-}
-/**********/
-/*button*/
-
-.button1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 5%;
-  padding-bottom: 5%;
-}
-
-.btn1 {
-  text-decoration: none;
-  padding: 12px 20px;
-  margin: 10px;
-  font-size: 1.25rem;
-  position: center;
-  background: #eee2df;
-  color: #6B705C;
-  transform: transform 0.3s ease;
-  width: 300px;
-  font-size: 38px;
-}
-
-.btn1::after, .btn1::before {
-  content: '';
-  position: absolute;
-  opacity: 0.3;
-  background: #eee2df;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  bottom: 0;
-  z-index: -1;
-  transition: transform 0.3s ease;
-}
-
-.btn1:hover {
-  transform: translate(-12px, -12px);
-}
-
-.btn1:hover::after {
-  transform: translate(6px, 6px);
-}
-
-.btn1:hover::before {
-  transform: translate(12px, 12px);
-}
-
-/***************************************************/
 
 /**********/
 
@@ -341,12 +126,13 @@ height: 80%;
 position: relative;
 max-width: 1500px;
 overflow: hidden; /* Hide the images that slide out of frame */
-margin: 0 auto;
 }
 
 .carousel2-slides {
 display: flex;
 transition: transform 0.5s;
+height: 500px;  /* Adjust to desired fixed height */
+
 }
 
 .carousel2-slides img {
@@ -368,8 +154,9 @@ margin-right: 0; /* Remove margin from the last image */
 #testimonials {
 text-align: center;
 padding: 2rem 0;
-background-color: #6B705C;
+background-color: #84a59d;
 width: 100vw;
+height: 30vw;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -381,16 +168,29 @@ position: relative;
 display: inline-block;
 }
 
-.testimonials-container  h2{
-color: #eee2df;
-font-size: medium;
-letter-spacing: 1px;
-text-transform: lowercase;
+.testimonial-images {
+  display: flex;
+  justify-content: center; /* Align images horizontally center */
+  gap: 2rem; /* Add some gap between images */
+  padding-top: 3%;
 }
 
-.testimonials-container  h3{
-color: #eee2df;
-font-size: large;
+.testimonial-images img {
+  border-radius: 50%; /* Make images circular */
+  width: 200px; /* Adjust as needed */
+  height: 200px; /* Adjust as needed */
+  object-fit: cover; /* To maintain aspect ratio of the images */
+  border: 2px solid #ffe5ec;
+}
+
+
+.testimonials-container  h2{
+color: #ffe5ec;
+font-size: x-large;
+letter-spacing: 0.25px;
+padding-left: 3%;
+padding-right: 3%;
+line-height: 200%;
 }
 
 .testimonial-slide {
@@ -409,14 +209,17 @@ background-color: transparent;
 border: none;
 font-size: 2rem;
 cursor: pointer;
+color: #ffe5ec;
 }
 
 .prev {
-left: -2rem;
+left: 1rem;
+z-index: 2;
 }
 
 .next {
-right: -2rem;
+right: 1rem;
+z-index: 1;
 }
 
 /*******************/

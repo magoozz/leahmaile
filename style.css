@@ -2,7 +2,7 @@
 
 html, body {
   font-family: Arial, sans-serif;
-  background-color: #eee2df !important;
+  background-color: #e5e5e5 !important;
 }
 
 /*****************Movement of the page *******
@@ -28,7 +28,6 @@ h1 {
 }
 
 h2 {
-  text-transform: uppercase;
   font-size: 120px;
   letter-spacing: 12px;
   position: relative;
@@ -54,7 +53,7 @@ p {
 /*****************Nav Bar ************************/
 
 header {
-  background-color: #eee2df !important;
+  background-color: #e5e5e5 !important;
 }
 
 header::after {
@@ -71,7 +70,6 @@ nav {
 }
 
 .nav-links {
-  background-color: #eee2df !important;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -118,7 +116,6 @@ nav a:hover {
 }
 
 .nav-links {
-  background-color: #eee2df !important;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -153,7 +150,7 @@ nav a:hover {
   position: absolute;
   height: 90px;
   width: 100vw;
-  background-color: #eee2df;
+  background-color: #e5e5e5;
 }
 
 .toolbar-container {
@@ -209,7 +206,53 @@ nav a:hover {
 
 /***************************************************/
 
-/******************button***********************/
+.button1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn1 {
+  text-decoration: none;
+  padding: 12px 20px;
+  margin: 10px;
+  font-size: 1.25rem;
+  position: relative;
+  background: #84a59d;
+  color: #eddcd2;
+  border-radius: 30px;
+  transform: transform 0.3s ease;
+  width: 200px;
+  font-size: 40px;
+}
+
+.btn1::after, .btn1::before {
+  content: '';
+  position: absolute;
+  opacity: 0.3;
+  background: #84a59d;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: 30px;
+  transition: transform 0.3s ease;
+}
+
+.btn1:hover {
+  transform: translate(-12px, -12px);
+}
+
+.btn1:hover::after {
+  transform: translate(6px, 6px);
+}
+
+.btn1:hover::before {
+  transform: translate(12px, 12px);
+}
+
+/******************button for contact***********************/
 
 .button {
   display: flex;
@@ -223,7 +266,7 @@ nav a:hover {
   margin: 10px;
   font-size: 1.25rem;
   position: relative;
-  background: #6B705C;
+  background: #84a59d;
   color: #eddcd2;
   border-radius: 30px;
   transform: transform 0.3s ease;
@@ -235,7 +278,7 @@ nav a:hover {
   content: '';
   position: absolute;
   opacity: 0.3;
-  background: #6B705C;
+  background: #84a59d;
   width: 100%;
   height: 100%;
   left: 0;
@@ -261,9 +304,10 @@ nav a:hover {
 
 footer {
   background-color: #eee2df;
-  color: #6B705C;
+  color: #84a59d;
   text-align: center;
   position:absolute;
   width:100%;
   height:100px;
 }
+
