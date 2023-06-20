@@ -4,25 +4,8 @@
   padding: 0;
 }
 
-
-
-#hero {
-  pointer-events: none;
-  background-position: center;
-  background-size: cover;
-  color: #005f73; 
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-top: 5%;
-  font-family: 'Roboto Slab';
-}
-
-#hero-text {
-  float: right;
+html, body {
+  background-color: #84a59d;
 }
 
 .scroll-section {
@@ -43,6 +26,7 @@
   width: 100vw;
 }
 
+
 /*The image */
 #carousel-section {
   width: 50%;
@@ -51,9 +35,15 @@
 
 #carousel {
   position: relative;
-  padding-top: 133.33%; /* Adjust this value based on the aspect ratio of your vertical photos, e.g., 4:3 aspect ratio = 133.33% */
+  padding-top: 100%; /* Adjust this value based on the aspect ratio of your vertical photos, e.g., 4:3 aspect ratio = 133.33% */
   overflow: hidden;
     z-index: 1;
+    border: #e0e1dd 5px solid;
+}
+
+.lmm h1 {
+  padding-top: 10%;
+  color: #adb5bd;
 }
 
 .carousel-slide {
@@ -71,168 +61,267 @@
 .carousel-slide:first-child {
   left: 0;
 }
+
 /************/
 
-/*"here to capture your special moments... */
 #right-row {
   display: flex;
+  align-items: flex-end;
   flex-direction: column;
   align-items: center;
   width: 40%;
 }
 
-#special-moments {
+.flex-container {
   display: flex;
   flex-direction: column;
-  height: relative;
+  align-items: center;
 }
 
-#photographer-info {
-  width: 100%;
+.box {
+  padding: 4%;
+}
+
+.box p {
+  margin-bottom: 4%;
+}
+
+.box p {
+  color: #e0e1dd;
+  padding-bottom: 3%;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5vw; /* Adjust the font size using viewport width */
+  letter-spacing: 0.25px;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.hoverButton1 {
+  padding: 2% 4%; /* Adjust the padding as desired */
+  background-color: #84a59d;
+  color: #e0e1dd;
+  font-size: 3.5vw; 
+  font-family: 'Jura', sans-serif;
   text-align: center;
+  text-decoration: none;
+  border: #e0e1dd 3px solid;
+  width: 80%; /* Set the button width to 100% */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  /* Centering */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.hoverButton1:hover {
+  border: #e0e1dd 3px solid;
   background-color: #005f73;
+  color: #e0e1dd;
 }
+/******************/
 
-#photographer-info h2 {
-  font-family: "monument extended";
-  font-size: 200%;
-  text-transform: uppercase;
-  letter-spacing: 2.75px;
-  position: relative;
-  text-align: center;
-  line-height: 1.5;
-  padding-bottom: 5%;
-  color: #84a59d;
-}
-
-#photographer-info h3 {
-  font-family: "Trocchi";
-  font-size: 100%;
-  line-height: 1.5;
-}
-
-/**********/
+/******************/
 
 /* Five photo carousel */
 .carousel2-wrapper {
-display: flex;
-justify-content: center;
-align-items: center;
-width: 100vw;
-height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  padding-left: 0.25%;
+  height: auto;
 }
 
 .carousel2 {
-position: relative;
-max-width: 1500px;
-overflow: hidden; /* Hide the images that slide out of frame */
+  position: relative;
+  max-width: 1500px;
+  overflow: hidden;
+  background-color: #84a59d;
 }
 
 .carousel2-slides {
-display: flex;
-transition: transform 0.5s;
-height: 500px;  /* Adjust to desired fixed height */
-
+  display: flex;
+  transition: transform 0.5s;
+  height: auto; /* Switching from fixed to auto height */
 }
 
 .carousel2-slides img {
-width: calc(100% / 5 - 10px); /* Display 5 images at a time with 10px space between them */
-height: 90%;
-object-fit: cover;
-object-position: center;
-margin-right: 10px; /* Add space between the images */
+  width: 100%; /* Initially set the width of images to 100% */
+  height: auto; /* Changing height to auto for aspect ratio */
+  object-fit: cover;
+  object-position: center;
+  margin-right: 10px; /* Add space between the images */
 }
 
 .carousel2-slides img:last-child {
-margin-right: 0; /* Remove margin from the last image */
+  margin-right: 0; /* Remove margin from the last image */
 }
-/*************************/
 
+/* Media queries */
+
+@media (min-width: 600px) { /* For viewports larger than 600px */
+  .carousel2-slides img {
+    width: calc(100% / 3 - 10px); /* Display 3 images at a time with 10px space between them */
+  }
+}
+
+@media (min-width: 900px) { /* For viewports larger than 900px */
+  .carousel2-slides img {
+    width: calc(100% / 5 - 10px); /* Display 5 images at a time with 10px space between them */
+  }
+}
+
+/*************************/
 
 
 /* Testimonials */
 #testimonials {
-text-align: center;
-padding: 2rem 0;
-background-color: #84a59d;
-width: 100vw;
-height: 30vw;
-display: flex;
-justify-content: center;
-align-items: center;
-
-}
-
-.testimonials-container {
-position: relative;
-display: inline-block;
-}
-
-.testimonial-images {
+  text-align: center;
+  background-color: #84a59d;
+  width: 100vw;
+  height: auto;
   display: flex;
-  justify-content: center; /* Align images horizontally center */
-  gap: 2rem; /* Add some gap between images */
-  padding-top: 3%;
-}
-
-.testimonial-images img {
-  border-radius: 50%; /* Make images circular */
-  width: 200px; /* Adjust as needed */
-  height: 200px; /* Adjust as needed */
-  object-fit: cover; /* To maintain aspect ratio of the images */
-  border: 2px solid #ffe5ec;
-}
-
-
-.testimonials-container  h2{
-color: #ffe5ec;
-font-size: x-large;
-letter-spacing: 0.25px;
-padding-left: 3%;
-padding-right: 3%;
-line-height: 200%;
-}
-
-.testimonial-slide {
-display: none;
-}
-
-.testimonial-slide.active {
-display: block;
-}
-
-.arrow {
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-background-color: transparent;
-border: none;
-font-size: 2rem;
-cursor: pointer;
-color: #ffe5ec;
-}
-
-.prev {
-left: 1rem;
-z-index: 2;
-}
-
-.next {
-right: 1rem;
-z-index: 1;
-}
+  justify-content: center;
+  align-items: center;
+  }
+  
+  .testimonials-container {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  }
+  
+  .testimonial-images {
+    display: flex;
+    justify-content: center; /* Align images horizontally center */
+    gap: 2rem; /* Add some gap between images */
+    padding-top: 3%;
+  }
+  
+  .testimonial-images img {
+    border-radius: 50%; /* Make images circular */
+    width: 200px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    object-fit: cover; /* To maintain aspect ratio of the images */
+    border: 2px solid #e0e1dd;
+  }
+  
+  
+  .testimonials-container  h2{
+  color: #e0e1dd;
+  font-size: x-large;
+  letter-spacing: 0.25px;
+  padding-left: 3%;
+  padding-right: 3%;
+  line-height: 200%;
+  }
+  
+  .testimonials-container h3{
+    color: #005f73;
+  font-size: x-large;
+  letter-spacing: 0.25px;
+  padding-left: 3%;
+  padding-right: 3%;
+  line-height: 200%;
+    
+  }
+  
+  .testimonial-slide {
+  display: none;
+  }
+  
+  .testimonial-slide.active {
+  display: block;
+  }
+  
+  .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #005f73;
+  }
+  
+  .prev {
+  left: 1rem;
+  z-index: 2;
+  }
+  
+  .next {
+  right: 1rem;
+  z-index: 1;
+  }
 
 /*******************/
 
+/* Hi im leah */
+.main-container {
+  background-color: #84a59d;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center; /* centers items with space around them */
+  padding-top: 10%;
+  padding-bottom: 10%;
+  position: relative; /* add relative position here */
+}
 
+.text-container {
+  display: flex;
+  background-color: #005f73;
+  width: 80vw; /* adjust width as needed */
+  height: auto;
+  text-align: left; /* Align text to the left */
+  justify-content: flex-start; /* Aligns items to the start of the main axis */
+  padding: 1rem; /* Add padding to give text some room */
+  z-index: 1;
+}
+
+.text-container h2 {
+  font-size: 4vw;
+  padding-right: 40%;
+  padding-bottom: 2%;
+  color: #e0e1dd;
+}
+
+.text-container p {
+  font-size: 2vw;
+  padding-right: 35%;
+  padding-left: 5%;
+  color: #e0e1dd;
+  font-family: 'Jura', sans-serif;
+  font-weight: 1;
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 5%; /* adjust as needed */
+  right: 11%; /* adjust as needed */
+  width: 25vw; 
+  height: auto;
+  object-fit: cover;
+  z-index: 2;
+  border: #e0e1dd 3px solid;
+}
+
+
+/*****/
 
 /*The "lets work together" */
 #cta {
   position: relative;
   height: 400px;
-  color:#eee2df;
   width: 100vw;
-  height: 50vw;
+  height: 70vw;
 }
 
 .cta-container {
@@ -249,28 +338,39 @@ z-index: 1;
   align-items: center;
   text-align: center;
   color: white;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .cta-container h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
+  font-size: 200%;
+  margin-bottom: 5%;
+  text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5);
 }
 
-.cta-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #333;
-  color: white;
+/* Button */
+.hoverButton {
+  padding: 2% 4%; /* Adjust the padding as desired */
+  background-color: #84a59d;
+  color: #e0e1dd;
+  font-size: 3vw; 
+  font-family: 'Jura', sans-serif;
+  text-align: center;
   text-decoration: none;
-  font-size: 18px;
-  border-radius: 4px;
+  border: #e0e1dd 3px solid;
+  width: 40%; /* Set the button width to 100% */
+  cursor: pointer;
   transition: background-color 0.3s ease;
+  /* Centering */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.cta-button:hover {
-  background-color: #555;
+.hoverButton:hover {
+background-color: #005f73;
+    color: #e0e1dd;
 }
+/******************/
+
 /********/
 
 
@@ -299,3 +399,4 @@ footer {
   color: white;
 }
 /***************/
+

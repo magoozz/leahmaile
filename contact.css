@@ -234,52 +234,7 @@
     }
     /*************************/
 
-    /*The "lets work together" */
-#cta {
-    position: relative;
-    height: 400px;
-    color:#eee2df;
-    width: 100vw;
-    height: 50vw;
-  }
   
-  .cta-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  }
-  
-  .cta-container h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-  
-  .cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .cta-button:hover {
-    background-color: #555;
-  }
-  /********/
 
   /* Footer */
 footer {
