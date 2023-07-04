@@ -8,12 +8,6 @@ html, body {
   background-color: #84a59d;
 }
 
-.scroll-section {
-  margin: 100px 0;
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-
 /*The photos slide & text right under the hero */
 
 #carousel-info-wrapper {
@@ -38,24 +32,46 @@ html, body {
   padding-top: 100%; /* Adjust this value based on the aspect ratio of your vertical photos, e.g., 4:3 aspect ratio = 133.33% */
   overflow: hidden;
     z-index: 1;
-    border: #e0e1dd 5px solid;
+}
+
+.lmm {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  text-align: center;
 }
 
 .lmm h1 {
   padding-top: 10%;
   color: #adb5bd;
+  font-size: 7vw;
+  font-family: 'Reenie Beanie', cursive;
+  
+}
+
+.lmm h2 {
+  color: #84a59d;
+  font-size: 12vw;
+  letter-spacing: 12px;
+  font-family: 'League Spartan', Arial, sans-serif;
+  color: #84a59d; /* Text color */
+  text-shadow: 
+    -1px -1px 0 #e0e1dd, /* Top-left shadow */
+    1px -1px 0 #e0e1dd,  /* Top-right shadow */
+    -1px 1px 0 #e0e1dd,  /* Bottom-left shadow */
+    1px 1px 0 #e0e1dd;   /* Bottom-right shadow */
 }
 
 .carousel-slide {
   position: absolute;
   top: 0;
-  left: 100%;
-  width: 100%;
-  height: 100%;
+  left: 70%;
+  width: 70%;
+  height: 95%;
   background-size: cover;
   background-position: center;
   transition: transform 4s ease forward;
-
+  border: #e0e1dd 4px solid;
+  position: center;
 }
 
 .carousel-slide:first-child {
@@ -78,33 +94,13 @@ html, body {
   align-items: center;
 }
 
-.box {
-  padding: 4%;
-}
-
-.box p {
-  margin-bottom: 4%;
-}
-
-.box p {
-  color: #e0e1dd;
-  padding-bottom: 3%;
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2.5vw; /* Adjust the font size using viewport width */
-  letter-spacing: 0.25px;
-  padding-left: 3%;
-  padding-right: 3%;
-}
-
 .hoverButton1 {
   padding: 2% 4%; /* Adjust the padding as desired */
   background-color: #84a59d;
   color: #e0e1dd;
   font-size: 3.5vw; 
-  font-family: 'Jura', sans-serif;
+  font-family: 'Avenir Next', Arial, sans-serif;
+  font-weight: 300;
   text-align: center;
   text-decoration: none;
   border: #e0e1dd 3px solid;
@@ -133,7 +129,6 @@ html, body {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  padding-left: 0.25%;
   height: auto;
 }
 
@@ -155,6 +150,7 @@ html, body {
   height: auto; /* Changing height to auto for aspect ratio */
   object-fit: cover;
   object-position: center;
+  border: #e0e1dd 1px solid;
   margin-right: 10px; /* Add space between the images */
 }
 
@@ -188,6 +184,8 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
   }
   
   .testimonials-container {
@@ -200,7 +198,9 @@ html, body {
     display: flex;
     justify-content: center; /* Align images horizontally center */
     gap: 2rem; /* Add some gap between images */
-    padding-top: 3%;
+    padding-top: 1%;
+    background-color: #8b8c89;
+    padding-bottom: 1%;
   }
   
   .testimonial-images img {
@@ -208,27 +208,32 @@ html, body {
     width: 200px; /* Adjust as needed */
     height: 200px; /* Adjust as needed */
     object-fit: cover; /* To maintain aspect ratio of the images */
-    border: 2px solid #e0e1dd;
-  }
+    border: 2px solid #005f73;
+    }
   
   
   .testimonials-container  h2{
   color: #e0e1dd;
-  font-size: x-large;
+  font-size: 2vw;
   letter-spacing: 0.25px;
-  padding-left: 3%;
-  padding-right: 3%;
   line-height: 200%;
+  font-family: 'Avenir Next', Arial, sans-serif;
+  font-weight: 400;
+  background-color: #8b8c89;
+  padding-top: 1%;
   }
   
   .testimonials-container h3{
     color: #005f73;
-  font-size: x-large;
+  font-size: 300%;
   letter-spacing: 0.25px;
   padding-left: 3%;
   padding-right: 3%;
   line-height: 200%;
-    
+  font-family: 'League Spartan', Arial, sans-serif;
+  letter-spacing: 5px;
+  text-shadow: 2px 2px 3px #e0e1dd;
+  background-color: #8b8c89;
   }
   
   .testimonial-slide {
@@ -288,9 +293,12 @@ html, body {
 
 .text-container h2 {
   font-size: 4vw;
-  padding-right: 40%;
   padding-bottom: 2%;
+  padding-left: 5%;
   color: #e0e1dd;
+  letter-spacing: 12px;
+  font-family: 'League Spartan', Arial, sans-serif;
+  text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5);
 }
 
 .text-container p {
@@ -298,8 +306,8 @@ html, body {
   padding-right: 35%;
   padding-left: 5%;
   color: #e0e1dd;
-  font-family: 'Jura', sans-serif;
-  font-weight: 1;
+  font-family: 'Avenir Next', Arial, sans-serif;
+  font-weight: 300;
 }
 
 .image-overlay {
@@ -338,12 +346,14 @@ html, body {
   align-items: center;
   text-align: center;
   color: white;
+  font-family: 'League Spartan', Arial, sans-serif;
 }
 
 .cta-container h2 {
   font-size: 200%;
   margin-bottom: 5%;
-  text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5);
+  letter-spacing: 12px;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* Button */
@@ -378,6 +388,7 @@ background-color: #005f73;
 footer {
   background-color: #eee2df;
   padding: 20px 0;
+  font-family: 'Reenie Beanie', cursive;
 }
 
 .footer-container {

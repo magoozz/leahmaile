@@ -61,8 +61,6 @@ function moveRight() {
 setInterval(moveRight, 4050); // Adjust the timing as needed
 
 
-
-
 /******This is the section that allows you to manually scroll through the testimonials */
 let currentTestimonial = 0;
 const testimonials = document.getElementsByClassName('testimonial-slide');
@@ -78,6 +76,40 @@ function changeTestimonial(direction) {
   }
 
   testimonials[currentTestimonial].classList.add('active');
+
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+  
+    const fname = document.getElementById('fname').value;
+    const lname = document.getElementById('lname').value;
+    const email = document.getElementById('email').value;
+    const subject = document.getElementById('subject').value;
+    const description = document.getElementById('description').value;
+  
+    if (!fname || !lname || !email || !subject || !description) {
+      alert('All fields must be filled out');
+      return;
+    }
+  
+    if (!validator.isEmail(email)) {
+      alert('Please enter a valid email address');
+      return;
+    }
+  
+    // You'd need to replace these with your actual EmailJS service ID and template ID
+    emailjs.send('service_ID', 'template_ID', {
+      from_name: fname + ' ' + lname,
+      to_name: 'Your Name',
+      message: `Subject: ${subject}\n\nDescription: ${description}`,
+      reply_to: email
+    })
+    .then(function(response) {
+      console.log('SUCCESS!', response.status, response.text);
+    }, function(err) {
+      console.log('FAILED...', err);
+    });
+  });
+  
 }
 
 

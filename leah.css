@@ -1,7 +1,63 @@
-#leah {
-    display: flex;
-}
+
+html, body {
+    background-color: #84a59d;
+  }
+
 
 .leah-container {
-    
+    height: 80vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
+
+  .text-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    width: 80vw; /* adjust width as needed */
+    height: auto;
+    text-align: left; /* Align text to the left */
+    justify-content: flex-start; /* Aligns items to the start of the main axis */
+    padding: 1rem; /* Add padding to give text some room */
+    z-index: 1;
+  }
+  
+  
+  .text-container p {
+    font-size: 1.75vw;
+    color: #e0e1dd;
+    font-family: 'Jura', sans-serif;
+    padding-left: 5%;
+    padding-bottom: 8%;
+  }
+
+  .image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 15%;
+    padding-right: 5%;
+  }
+  
+  .image img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .title {
+    position: absolute; /* Added */
+    top: 20%; /* Added */
+    left: 20%; /* Added */
+    z-index: 1; /* Added */
+    padding: 10px; /* Added */
+    letter-spacing: 12px;
+    color: #005f73;
+    text-decoration: wavy;
+    text-decoration-color: #e0e1dd;
+    font-family: 'League Spartan', Arial, sans-serif;
+  }
+ 
+  
