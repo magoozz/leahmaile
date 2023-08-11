@@ -3,7 +3,7 @@
   <head>
     <title>Meet Leah! - Leah Maile Media</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="leah.css">
+    <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="aos-by-red.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
@@ -26,26 +26,40 @@
     </header>
 
     <main>
-          <section class="scroll-section">
-              <div class="container">
-                <h1>Book a shoot!</h1>
-                <form action="https://formsubmit.co/el/dizesi" method="POST" >
-                  <input type="text" name="NAME" placeholder="FULL NAME" required>
-                  <input type="email" name="email" placeholder="EMAIL" required>
-                  <input type="date" id="date">
-                  <select name="Type">
-                    <option>Grad Shoot</option>
-                    <option>Ground Event</option>
-                    <option>Couple</option>
-                    <option>Baby</option>
-                    <option>Team Photos</option>
-                    <option>Other</option>
-                  </select>
-                  <textarea  name="Message" placeholder="Message" required></textarea>
-                  <button type="submit">Submit</button>
-                </form>
-              </div>
-           </section>
+            <div class="form-container">
+              <h1>Booking Inquiry</h1>
+              <form action="https://formsubmit.co/8daaf66ae30e1747ef6330b386269f5d" method="POST">
+                <option value="event">Event</option>
+                  <div class="form-group">
+                      <label for="name">Full Name:</label>
+                      <input type="text" id="name" name="name" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="email">Email Address:</label>
+                      <input type="email" id="email" name="email" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="date">Desired Date:</label>
+                      <input type="date" id="date" name="date">
+                  </div>
+                  <div class="form-group">
+                      <label for="shoot-type">Type of Shoot:</label>
+                      <select id="shoot-type" name="shootType">
+                          <option value="wedding">Wedding</option>
+                          <option value="portrait">Portrait</option>
+                          <option value="event">Event</option>
+                          <option value="event">Graduation</option>
+                          <!-- add more shoot types as needed -->
+                      </select>
+            
+                  </div>
+                  <div class="form-group">
+                      <label for="details">Additional Details:</label>
+                      <textarea id="details" name="details" rows="4"></textarea>
+                  </div>
+                  <button type="submit">Submit Inquiry</button>
+              </form>
+          </div>
 
     </main>
   </body>

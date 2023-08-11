@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* creates a 4 column grid */
+    gap: 20px; /* space between grid items */
+    max-width: 1200px; /* you can adjust as needed */
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.portfolio-item {
+    position: relative;
+    margin: 0; /* reset any margin-top defined earlier */
+    overflow: hidden; /* in case the image scales and overflows the container */
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* creates a 5 column grid */
+    gap: 20px; /* space between grid items */
+    max-width: 1400px; /* you can adjust as needed */
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.portfolio-item a {
+    display: block;
+    cursor: pointer;
+    text-decoration: none; /* Remove default anchor styles */
+}
+
+.portfolio-image {
+    width: 100%;
+    max-height: 500px;
+    display: block;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.portfolio-item:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
